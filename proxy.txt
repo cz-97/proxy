@@ -2,3 +2,5 @@
 DOMAIN-SUFFIX,happymh.com
 DOMAIN-SUFFIX,hanman18.com
 DOMAIN-SUFFIX,iyinghua.io
+DOMAIN-SUFFIX,18comic.vip
+
