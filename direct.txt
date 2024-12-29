@@ -1,3 +1,1 @@
-DOMAIN-SUFFIX,girigirilove.com
-DOMAIN-SUFFIX,api.dandanplay.net
-DOMAIN-SUFFIX,agedm.org
+DOMAIN,v16m-default.akamaized.net
