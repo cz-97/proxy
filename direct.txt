@@ -1,1 +1,3 @@
 DOMAIN,v16m-default.akamaized.net
+DOMAIN,www.hello-algo.com
+DOMAIN,store.rg-adguard.net
