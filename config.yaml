@@ -617,7 +617,11 @@ proxy-groups:
       - 🇦🇺 澳大利亚Z01
       - 🇫🇷 法国Z01
       - 🇺🇦 乌克兰Z01
-
+  - name: ☁️ OneDrive
+    type: select
+    proxies:
+      - DIRECT
+      - 选择节点
   - name: 🇭🇰 香港节点
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -774,6 +778,17 @@ rules:
   - RULE-SET,lancidr,DIRECT
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
+  - DOMAIN-KEYWORD,1drv,☁️ OneDrive
+  - DOMAIN-KEYWORD,onedrive,☁️ OneDrive
+  - DOMAIN-KEYWORD,skydrive,☁️ OneDrive
+  - DOMAIN-SUFFIX,livefilestore.com,☁️ OneDrive
+  - DOMAIN-SUFFIX,oneclient.sfx.ms,☁️ OneDrive
+  - DOMAIN-SUFFIX,photos.live.com,☁️ OneDrive
+  - DOMAIN-SUFFIX,sharepoint.com,☁️ OneDrive
+  - DOMAIN-SUFFIX,sharepointonline.com,☁️ OneDrive
+  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,☁️ OneDrive
+  - DOMAIN-SUFFIX,storage.live.com,☁️ OneDrive
+  - DOMAIN-SUFFIX,storage.msn.com,☁️ OneDrive
   - RULE-SET,代理,选择节点
   - RULE-SET,proxy,选择节点
   - RULE-SET,非中国顶域,选择节点
