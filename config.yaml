@@ -789,5 +789,5 @@ rules:
   - RULE-SET,我的代理,选择节点
   - RULE-SET,远程代理,选择节点
   - RULE-SET,非中国顶域,选择节点
-  - RULE-SET,纸飞机ip,选择节点
+  - RULE-SET,纸飞机IP,选择节点
   - MATCH,未匹配
