@@ -562,7 +562,6 @@ proxy-groups:
     proxies:
       - DIRECT
       - 选择节点
-
   - name: 选择节点
     type: select
     proxies:
@@ -690,107 +689,105 @@ proxy-groups:
       - 🇰🇷 韩国Z01
 
 rule-providers:
-  代理:
+  我的代理:
     behavior: classical
     type: http
     url: "https://raw.gitmirror.com/cz-97/proxy/main/proxy.txt"
     format: "text"
     interval: 3600
-    path: ./代理.yaml
+    path: ./我的代理.yaml
 
-  直连:
+  我的直连:
     behavior: classical
     type: http
     url: "https://raw.gitmirror.com/cz-97/proxy/main/direct.txt"
     format: "text"
     interval: 3600
-    path: ./直连.yaml
+    path: ./我的直连.yaml
+
+  微软云盘:
+    behavior: classical
+    type: http
+    url: "https://raw.gitmirror.com/cz-97/proxy/main/onedrive.txt"
+    format: "text"
+    interval: 3600
+    path: ./微软云盘.yaml
 
   广告:
     type: http
     behavior: domain
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/reject.txt"
-    path: ./ruleset/reject.yaml
+    path: ./ruleset/广告.yaml
     interval: 86400
 
   万里长城:
     type: http
     behavior: domain
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/gfw.txt"
-    path: ./ruleset/gfw.yaml
+    path: ./ruleset/万里长城.yaml
     interval: 86400
 
   非中国顶域:
     type: http
     behavior: domain
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt"
-    path: ./ruleset/tld-not-cn.yaml
+    path: ./ruleset/非中国顶域.yaml
     interval: 86400
 
-  纸飞机ip:
+  纸飞机IP:
     type: http
     behavior: ipcidr
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/telegramcidr.txt"
-    path: ./ruleset/telegramcidr.yaml
+    path: ./ruleset/纸飞机IP.yaml
     interval: 86400
 
-  direct:
+  远程直连:
     type: http
     behavior: domain
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/direct.txt"
-    path: ./ruleset/direct.yaml
+    path: ./ruleset/远程直连.yaml
     interval: 86400
 
-  cncidr:
+  大陆IP:
     type: http
     behavior: ipcidr
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/cncidr.txt"
-    path: ./ruleset/cncidr.yaml
+    path: ./ruleset/大陆IP.yaml
     interval: 86400
 
-  private:
+  私有域:
     type: http
     behavior: domain
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/private.txt"
-    path: ./ruleset/private.yaml
+    path: ./ruleset/私有域.yaml
     interval: 86400
 
-  lancidr:
+  局域网IP及保留IP:
     type: http
     behavior: ipcidr
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/lancidr.txt"
-    path: ./ruleset/lancidr.yaml
+    path: ./ruleset/局域网IP及保留IP.yaml
     interval: 86400
 
-  proxy:
+  远程代理:
     type: http
     behavior: domain
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/proxy.txt"
-    path: ./ruleset/proxy.yaml
+    path: ./ruleset/远程代理.yaml
     interval: 86400
 
 rules:
   - RULE-SET,广告,REJECT
-  - RULE-SET,直连,DIRECT
-  - RULE-SET,direct,DIRECT
-  - RULE-SET,private,DIRECT
-  - RULE-SET,cncidr,DIRECT
-  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,我的直连,DIRECT
+  - RULE-SET,远程直连,DIRECT
+  - RULE-SET,私有域,DIRECT
+  - RULE-SET,大陆IP,DIRECT
+  - RULE-SET,局域网IP及保留IP,DIRECT
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - DOMAIN-KEYWORD,1drv,☁️ OneDrive
-  - DOMAIN-KEYWORD,onedrive,☁️ OneDrive
-  - DOMAIN-KEYWORD,skydrive,☁️ OneDrive
-  - DOMAIN-SUFFIX,livefilestore.com,☁️ OneDrive
-  - DOMAIN-SUFFIX,oneclient.sfx.ms,☁️ OneDrive
-  - DOMAIN-SUFFIX,photos.live.com,☁️ OneDrive
-  - DOMAIN-SUFFIX,sharepoint.com,☁️ OneDrive
-  - DOMAIN-SUFFIX,sharepointonline.com,☁️ OneDrive
-  - DOMAIN-SUFFIX,spoprod-a.akamaihd.net,☁️ OneDrive
-  - DOMAIN-SUFFIX,storage.live.com,☁️ OneDrive
-  - DOMAIN-SUFFIX,storage.msn.com,☁️ OneDrive
-  - RULE-SET,代理,选择节点
-  - RULE-SET,proxy,选择节点
+  - RULE-SET,微软云盘,☁️ OneDrive
+  - RULE-SET,我的代理,选择节点
+  - RULE-SET,远程代理,选择节点
   - RULE-SET,非中国顶域,选择节点
   - RULE-SET,纸飞机ip,选择节点
   - MATCH,未匹配

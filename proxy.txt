@@ -2,13 +2,11 @@
 DOMAIN-SUFFIX,happymh.com
 DOMAIN-SUFFIX,hanman18.com
 DOMAIN-SUFFIX,iyinghua.io
-DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,manga18.club
 DOMAIN-KEYWORD,z-lib
 DOMAIN-KEYWORD,hentai
 DOMAIN-KEYWORD,sex
 DOMAIN-KEYWORD,porn
 DOMAIN-KEYWORD,copilot
-DOMAIN-KEYWORD,av
 DOMAIN,storeedgefd.dsx.mp.microsoft.com
 DOMAIN,cdn.winget.microsoft.com
