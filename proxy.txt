@@ -10,3 +10,4 @@ DOMAIN-KEYWORD,porn
 DOMAIN-KEYWORD,copilot
 DOMAIN,storeedgefd.dsx.mp.microsoft.com
 DOMAIN,cdn.winget.microsoft.com
+DOMAIN-KEYWORD,liteapks
