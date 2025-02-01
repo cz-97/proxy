@@ -8,7 +8,5 @@ DOMAIN-KEYWORD,hentai
 DOMAIN-KEYWORD,sex
 DOMAIN-KEYWORD,porn
 DOMAIN-KEYWORD,copilot
-DOMAIN,storeedgefd.dsx.mp.microsoft.com
-DOMAIN,cdn.winget.microsoft.com
 DOMAIN-KEYWORD,liteapks
 DOMAIN-KEYWORD,spacedesk
