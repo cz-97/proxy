@@ -148,26 +148,11 @@ rule-providers:
     interval: 3600
     path: ./我的直连.txt
 
-  微软云盘:
-    behavior: classical
-    type: http
-    url: "https://raw.gitmirror.com/cz-97/proxy/main/onedrive.txt"
-    format: "text"
-    interval: 3600
-    path: ./微软云盘.txt
-
   广告:
     type: http
     behavior: domain
     url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/reject.txt"
     path: ./ruleset/广告.yaml
-    interval: 86400
-
-  万里长城:
-    type: http
-    behavior: domain
-    url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/gfw.txt"
-    path: ./ruleset/万里长城.yaml
     interval: 86400
 
   非中国顶域:
@@ -228,7 +213,6 @@ rules:
   - RULE-SET,局域网IP及保留IP,DIRECT
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - RULE-SET,微软云盘,选择节点
   - RULE-SET,我的代理,选择节点
   - RULE-SET,远程代理,选择节点
   - RULE-SET,非中国顶域,选择节点
