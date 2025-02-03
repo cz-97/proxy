@@ -206,7 +206,6 @@ rule-providers:
 
 rules:
   - RULE-SET,广告,REJECT
-  - RULE-SET,我的直连,DIRECT
   - RULE-SET,远程直连,DIRECT
   - RULE-SET,私有域,DIRECT
   - RULE-SET,大陆IP,DIRECT
@@ -214,6 +213,7 @@ rules:
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
   - RULE-SET,我的代理,选择节点
+  - RULE-SET,我的直连,DIRECT
   - RULE-SET,远程代理,选择节点
   - RULE-SET,非中国顶域,选择节点
   - RULE-SET,纸飞机IP,选择节点
