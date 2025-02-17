@@ -137,7 +137,7 @@ rule-providers:
     type: http
     url: "https://raw.gitmirror.com/cz-97/proxy/main/proxy.txt"
     format: "text"
-    interval: 3600
+    interval: 86400
     path: ./我的代理.txt
 
   我的直连:
@@ -145,7 +145,7 @@ rule-providers:
     type: http
     url: "https://raw.gitmirror.com/cz-97/proxy/main/direct.txt"
     format: "text"
-    interval: 3600
+    interval: 86400
     path: ./我的直连.txt
 
   广告:
