@@ -1,9 +1,0 @@
-DOMAIN-SUFFIX,happymh.com
-DOMAIN-SUFFIX,hanman18.com
-DOMAIN-SUFFIX,iyinghua.io
-DOMAIN-SUFFIX,manga18.club
-DOMAIN-KEYWORD,z-lib
-DOMAIN-KEYWORD,copilot
-DOMAIN-KEYWORD,liteapks
-DOMAIN-KEYWORD,spacedesk
-DOMAIN-SUFFIX,bakamh.com
