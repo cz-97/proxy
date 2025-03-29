@@ -6,3 +6,4 @@ DOMAIN-KEYWORD,z-lib
 DOMAIN-KEYWORD,copilot
 DOMAIN-KEYWORD,liteapks
 DOMAIN-KEYWORD,spacedesk
+DOMAIN-SUFFIX,bakamh.com
