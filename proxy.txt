@@ -14,3 +14,4 @@ DOMAIN,files2.freedownloadmanager.org
 DOMAIN,dm1.xfdm.pro
 DOMAIN-SUFFIX,acgfta.com
 DOMAIN-SUFFIX,omofunz.com
+DOMAIN,www.7sefun.xyz
