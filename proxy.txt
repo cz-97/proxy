@@ -13,3 +13,4 @@ DOMAIN-SUFFIX,bakamh.com
 DOMAIN,files2.freedownloadmanager.org
 DOMAIN,dm1.xfdm.pro
 DOMAIN,acgfta.com
+DOMAIN,omofunz.com
