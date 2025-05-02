@@ -12,5 +12,5 @@ DOMAIN-SUFFIX,tldraw.com
 DOMAIN-SUFFIX,bakamh.com
 DOMAIN,files2.freedownloadmanager.org
 DOMAIN,dm1.xfdm.pro
-DOMAIN,acgfta.com
-DOMAIN,omofunz.com
+DOMAIN-SUFFIX,acgfta.com
+DOMAIN-SUFFIX,omofunz.com
