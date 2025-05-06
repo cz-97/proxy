@@ -15,3 +15,5 @@ DOMAIN,dm1.xfdm.pro
 DOMAIN-SUFFIX,acgfta.com
 DOMAIN-SUFFIX,omofunz.com
 DOMAIN,www.7sefun.xyz
+DOMAIN,appflowy.com
+DOMAIN,零元机场.com
