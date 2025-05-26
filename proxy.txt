@@ -18,3 +18,4 @@ DOMAIN,www.7sefun.xyz
 DOMAIN,appflowy.com
 DOMAIN,零元机场.com
 DOMAIN-KEYWORD,google
+DOMAIN,plugins.gradle.org
