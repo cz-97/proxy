@@ -19,3 +19,4 @@ DOMAIN,appflowy.com
 DOMAIN,零元机场.com
 DOMAIN-KEYWORD,google
 DOMAIN,plugins.gradle.org
+DOMAIN,img.xn--z4q48lcvpsq0c.com
