@@ -1,19 +1,12 @@
 const main = (config) => {
 
-    config['proxy-groups'] = [];
     config['rules'] = [];
     config['rule-providers'] = {};
 
-    // 获取所有 proxy 的 name
-    const proxyNames = config.proxies.map(proxy => proxy.name);
-
+    config['proxy-groups'][0]['name']="选择节点";
     // 添加新的 proxy-groups
     config['proxy-groups'] = [
-        {
-            name: "选择节点",
-            type: "select",
-            proxies: proxyNames
-        },
+        ...config['proxy-groups'],
         {
             name: "漏网之鱼",
             type: "select",
