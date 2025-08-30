@@ -3,7 +3,21 @@ const main = (config) => {
     config['rules'] = [];
     config['rule-providers'] = {};
 
-    config['proxy-groups'][0]['name']="选择节点";
+    new_proxy_name="选择节点";
+    old_proxy_name=config['proxy-groups'][0]['name'];
+
+    config['proxy-groups'][0]['name']=new_proxy_name;
+    
+    
+    for(let i=1;i<config['proxy-groups'].length;i++){
+    
+          for(let j=0;j<config['proxy-groups'][i]['proxies'].length;j++){
+              if(config['proxy-groups'][i]['proxies'][j]===old_proxy_name){
+                  config['proxy-groups'][i]['proxies'][j]=new_proxy_name
+              }
+          }
+    }
+    
     // 添加新的 proxy-groups
     config['proxy-groups'] = [
         ...config['proxy-groups'],
