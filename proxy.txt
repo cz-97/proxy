@@ -9,7 +9,7 @@ DOMAIN-KEYWORD,porn
 DOMAIN-KEYWORD,copilot
 DOMAIN-KEYWORD,spacedesk
 DOMAIN-SUFFIX,tldraw.com
-DOMAIN-SUFFIX,bakamh.com
+DOMAIN,bakamh.com
 DOMAIN,files2.freedownloadmanager.org
 DOMAIN,dm1.xfdm.pro
 DOMAIN-SUFFIX,acgfta.com
