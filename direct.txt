@@ -1,5 +1,6 @@
 DOMAIN,v16m-default.akamaized.net
 DOMAIN-KEYWORD,agedm
+DOMAIN-KEYWORD,mozilla
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,aadrm.com
 DOMAIN-SUFFIX,acompli.com
