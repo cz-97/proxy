@@ -122,6 +122,7 @@ const main = (config) => {
     // 添加 rules
     config['rules'] = [
         "RULE-SET,广告,REJECT",
+        "DOMAIN,copilot.microsoft.com,选择节点",
         "RULE-SET,远程直连,DIRECT",
         "RULE-SET,私有域,DIRECT",
         "RULE-SET,大陆IP,DIRECT",
@@ -137,4 +138,5 @@ const main = (config) => {
     ];
 
     return config;
+
 };
