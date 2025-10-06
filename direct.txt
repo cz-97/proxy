@@ -79,3 +79,4 @@ DOMAIN-SUFFIX,yammerusercontent.com
 DOMAIN,vdownload.hembed.com
 DOMAIN-KEYWORD,steam
 DOMAIN-KEYWORD,jm18c
+DOMAIN,bgm.tv
