@@ -3,20 +3,9 @@ const main = (config) => {
     config['rules'] = [];
     config['rule-providers'] = {};
 
-    new_proxy_name="选择节点";
-    old_proxy_name=config['proxy-groups'][0]['name'];
-
-    config['proxy-groups'][0]['name']=new_proxy_name;
     
+    proxy_name=config['proxy-groups'][0]['name'];
     
-    for(let i=1;i<config['proxy-groups'].length;i++){
-    
-          for(let j=0;j<config['proxy-groups'][i]['proxies'].length;j++){
-              if(config['proxy-groups'][i]['proxies'][j]===old_proxy_name){
-                  config['proxy-groups'][i]['proxies'][j]=new_proxy_name
-              }
-          }
-    }
     
     // 添加新的 proxy-groups
     config['proxy-groups'] = [
@@ -24,7 +13,7 @@ const main = (config) => {
         {
             name: "漏网之鱼",
             type: "select",
-            proxies: ["DIRECT", "选择节点"]
+            proxies: ["DIRECT", proxy_name]
         }
     ];
 
@@ -122,7 +111,7 @@ const main = (config) => {
     // 添加 rules
     config['rules'] = [
         "RULE-SET,广告,REJECT",
-        "DOMAIN,copilot.microsoft.com,选择节点",
+        "DOMAIN,copilot.microsoft.com,"+proxy_name,
         "RULE-SET,远程直连,DIRECT",
         "RULE-SET,私有域,DIRECT",
         "RULE-SET,大陆IP,DIRECT",
@@ -130,10 +119,10 @@ const main = (config) => {
         "GEOIP,LAN,DIRECT",
         "GEOIP,CN,DIRECT",
         "RULE-SET,我的直连,DIRECT",
-        "RULE-SET,我的代理,选择节点",
-        "RULE-SET,远程代理,选择节点",
-        "RULE-SET,非中国顶域,选择节点",
-        "RULE-SET,纸飞机IP,选择节点",
+        "RULE-SET,我的代理,"+proxy_name,
+        "RULE-SET,远程代理,"+proxy_name",
+        "RULE-SET,非中国顶域,"+proxy_name,
+        "RULE-SET,纸飞机IP,"+proxy_name,
         "MATCH,漏网之鱼"
     ];
 
