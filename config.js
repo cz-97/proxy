@@ -120,7 +120,7 @@ const main = (config) => {
         "GEOIP,CN,DIRECT",
         "RULE-SET,我的直连,DIRECT",
         "RULE-SET,我的代理,"+proxy_name,
-        "RULE-SET,远程代理,"+proxy_name",
+        "RULE-SET,远程代理,"+proxy_name,
         "RULE-SET,非中国顶域,"+proxy_name,
         "RULE-SET,纸飞机IP,"+proxy_name,
         "MATCH,漏网之鱼"
