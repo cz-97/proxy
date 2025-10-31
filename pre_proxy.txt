@@ -1,1 +1,2 @@
 DOMAIN,copilot.microsoft.com
+DOMAIN,steamcommunity.com
