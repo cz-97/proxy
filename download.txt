@@ -1,1 +1,1 @@
-DOMAIN-SUFFIX akamaized.net
+DOMAIN-SUFFIX，akamaized.net
