@@ -1,1 +1,2 @@
 DOMAIN-SUFFIX,akamaized.net
+DOMAIN,dm1.xfdm.pro

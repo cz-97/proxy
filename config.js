@@ -38,6 +38,14 @@ const main = (config) => {
 
   // 添加 rule-providers
   config["rule-providers"] = {
+    在线: {
+      behavior: "classical",
+      type: "http",
+      url: "https://raw.githubusercontent.com/cz-97/proxy/main/online.txt",
+      format: "text",
+      interval: 86400,
+      path: "./在线.txt",
+    },
     下载: {
       behavior: "classical",
       type: "http",
@@ -145,6 +153,7 @@ const main = (config) => {
     "GEOIP,LAN,DIRECT",
     "GEOIP,CN,DIRECT",
     "RULE-SET,我的直连,DIRECT",
+    "RULE-SET,在线,十分之一",
     "RULE-SET,下载,百分之一",
     `RULE-SET,我的代理,${proxy_name}`,
     `RULE-SET,远程代理,${proxy_name}`,
