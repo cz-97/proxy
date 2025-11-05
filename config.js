@@ -1,38 +1,90 @@
 const main = (config) => {
+  config["proxy-groups"] = [];
   config["rules"] = [];
   config["rule-providers"] = {};
 
-  proxy_name = config["proxy-groups"][0]["name"];
-
   十分之一 = [];
   百分之一 = [];
+  chatgpt = [];
+  代理组 = [];
 
-  for (const proxy of config["proxies"]) {
+  const proxies = config["proxies"];
+
+  for (const proxy of proxies) {
     const name = proxy.name;
+    代理组.push(name);
     if (name.includes("0.1")) {
       十分之一.push(name);
-    } else if (name.includes("0.01")) {
+    }
+    if (name.includes("0.01")) {
       百分之一.push(name);
+    }
+    if (!name.includes("香港")) {
+      chatgpt.push(name);
     }
   }
 
+  const proxy_name = "默认代理";
   // 添加新的 proxy-groups
   config["proxy-groups"] = [
-    ...config["proxy-groups"],
     {
-      name: "十分之一",
+      name: proxy_name,
       type: "select",
-      proxies: 十分之一,
-    },
-    {
-      name: "百分之一",
-      type: "select",
-      proxies: 百分之一,
+      proxies: ["自动选择", ...代理组],
     },
     {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
+    },
+    {
+      name: "自动选择",
+      type: "url-test",
+      proxies: 代理组,
+      url: "http://www.gstatic.com/generate_204",
+      interval: 1800,
+      tolerance: 50,
+    },
+    {
+      name: "十分之一",
+      type: "url-test",
+      proxies: 十分之一,
+      url: "http://www.gstatic.com/generate_204",
+      interval: 1800,
+      tolerance: 50,
+    },
+    {
+      name: "百分之一",
+      type: "url-test",
+      proxies: 百分之一,
+      url: "http://www.gstatic.com/generate_204",
+      interval: 1800,
+      tolerance: 50,
+    },
+    {
+      name: "CHATGPT",
+      type: "select",
+      proxies: chatgpt,
+    },
+    {
+      name: "GITHUBRELEASE",
+      type: "select",
+      proxies: ["百分之一", "十分之一", proxy_name],
+    },
+    {
+      name: "PLAYSTORE",
+      type: "select",
+      proxies: ["百分之一", "十分之一", proxy_name],
+    },
+    {
+      name: "ONLINE",
+      type: "select",
+      proxies: ["十分之一", "百分之一", proxy_name],
+    },
+    {
+      name: "DOWNLOAD",
+      type: "select",
+      proxies: ["百分之一", "十分之一", proxy_name],
     },
   ];
 
@@ -145,6 +197,9 @@ const main = (config) => {
   // 添加 rules
   config["rules"] = [
     "RULE-SET,广告,REJECT",
+    "DOMAIN-SUFFIX,chatgpt.com,CHATGPT",
+    "DOMAIN-SUFFIX,objects.githubusercontent.com,GITHUBRELEASE",
+    "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PLAYSTORE",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
     "RULE-SET,私有域,DIRECT",
@@ -153,8 +208,8 @@ const main = (config) => {
     "GEOIP,LAN,DIRECT",
     "GEOIP,CN,DIRECT",
     "RULE-SET,我的直连,DIRECT",
-    "RULE-SET,在线,十分之一",
-    "RULE-SET,下载,百分之一",
+    "RULE-SET,在线,ONLINE",
+    "RULE-SET,下载,DOWNLOAD",
     `RULE-SET,我的代理,${proxy_name}`,
     `RULE-SET,远程代理,${proxy_name}`,
     `RULE-SET,非中国顶域,${proxy_name}`,
