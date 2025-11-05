@@ -5,7 +5,7 @@ const main = (config) => {
 
   十分之一 = [];
   百分之一 = [];
-  chatgpt = [];
+  openai = [];
   代理组 = [];
 
   const proxies = config["proxies"];
@@ -20,7 +20,7 @@ const main = (config) => {
       百分之一.push(name);
     }
     if (!name.includes("香港")) {
-      chatgpt.push(name);
+      openai.push(name);
     }
   }
 
@@ -90,6 +90,14 @@ const main = (config) => {
 
   // 添加 rule-providers
   config["rule-providers"] = {
+    openai: {
+      behavior: "classical",
+      type: "http",
+      url: "https://raw.githubusercontent.com/cz-97/proxy/main/openai.txt",
+      format: "text",
+      interval: 86400,
+      path: "./openai.txt",
+    },
     在线: {
       behavior: "classical",
       type: "http",
@@ -197,7 +205,7 @@ const main = (config) => {
   // 添加 rules
   config["rules"] = [
     "RULE-SET,广告,REJECT",
-    "DOMAIN-SUFFIX,chatgpt.com,chatgpt",
+    "RULE-SET,openai,openai",
     "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
     "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,谷歌应用商店",
     `RULE-SET,预代理,${proxy_name}`,
