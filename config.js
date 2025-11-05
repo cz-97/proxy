@@ -198,7 +198,7 @@ const main = (config) => {
   config["rules"] = [
     "RULE-SET,广告,REJECT",
     "DOMAIN-SUFFIX,chatgpt.com,CHATGPT",
-    "DOMAIN-SUFFIX,objects.githubusercontent.com,GITHUBRELEASE",
+    "DOMAIN-SUFFIX,githubusercontent.com,GITHUBRELEASE",
     "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PLAYSTORE",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
