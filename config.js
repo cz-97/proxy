@@ -12,6 +12,9 @@ const main = (config) => {
 
   for (const proxy of proxies) {
     const name = proxy.name;
+    if (name.includes("套餐到期") || name.includes("剩余流量")) {
+      continue;
+    }
     代理组.push(name);
     if (name.includes("0.1")) {
       十分之一.push(name);
@@ -19,7 +22,13 @@ const main = (config) => {
     if (name.includes("0.01")) {
       百分之一.push(name);
     }
-    if (!name.includes("香港")) {
+    if (
+      name.includes("台湾") ||
+      name.includes("新加坡") ||
+      name.includes("日本") ||
+      name.includes("韩国") ||
+      name.includes("美国")
+    ) {
       openai.push(name);
     }
   }
@@ -33,9 +42,9 @@ const main = (config) => {
       proxies: ["自动选择", ...代理组],
     },
     {
-      name: "chatgpt",
+      name: "openai",
       type: "select",
-      proxies: chatgpt,
+      proxies: openai,
     },
     {
       name: "github发行版",
