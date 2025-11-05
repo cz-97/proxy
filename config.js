@@ -33,6 +33,31 @@ const main = (config) => {
       proxies: ["自动选择", ...代理组],
     },
     {
+      name: "chatgpt",
+      type: "select",
+      proxies: chatgpt,
+    },
+    {
+      name: "github发行版",
+      type: "select",
+      proxies: ["百分之一", "十分之一", proxy_name],
+    },
+    {
+      name: "谷歌应用商店",
+      type: "select",
+      proxies: ["百分之一", "十分之一", proxy_name],
+    },
+    {
+      name: "在线播放",
+      type: "select",
+      proxies: ["十分之一", "百分之一", proxy_name],
+    },
+    {
+      name: "下载",
+      type: "select",
+      proxies: ["百分之一", "十分之一", proxy_name],
+    },
+    {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
@@ -60,31 +85,6 @@ const main = (config) => {
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
-    },
-    {
-      name: "CHATGPT",
-      type: "select",
-      proxies: chatgpt,
-    },
-    {
-      name: "GITHUBRELEASE",
-      type: "select",
-      proxies: ["百分之一", "十分之一", proxy_name],
-    },
-    {
-      name: "PLAYSTORE",
-      type: "select",
-      proxies: ["百分之一", "十分之一", proxy_name],
-    },
-    {
-      name: "ONLINE",
-      type: "select",
-      proxies: ["十分之一", "百分之一", proxy_name],
-    },
-    {
-      name: "DOWNLOAD",
-      type: "select",
-      proxies: ["百分之一", "十分之一", proxy_name],
     },
   ];
 
@@ -197,9 +197,9 @@ const main = (config) => {
   // 添加 rules
   config["rules"] = [
     "RULE-SET,广告,REJECT",
-    "DOMAIN-SUFFIX,chatgpt.com,CHATGPT",
-    "DOMAIN-SUFFIX,githubusercontent.com,GITHUBRELEASE",
-    "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,PLAYSTORE",
+    "DOMAIN-SUFFIX,chatgpt.com,chatgpt",
+    "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
+    "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,谷歌应用商店",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
     "RULE-SET,私有域,DIRECT",
@@ -208,8 +208,8 @@ const main = (config) => {
     "GEOIP,LAN,DIRECT",
     "GEOIP,CN,DIRECT",
     "RULE-SET,我的直连,DIRECT",
-    "RULE-SET,在线,ONLINE",
-    "RULE-SET,下载,DOWNLOAD",
+    "RULE-SET,在线,在线播放",
+    "RULE-SET,下载,下载",
     `RULE-SET,我的代理,${proxy_name}`,
     `RULE-SET,远程代理,${proxy_name}`,
     `RULE-SET,非中国顶域,${proxy_name}`,
