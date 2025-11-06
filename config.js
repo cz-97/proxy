@@ -52,11 +52,6 @@ const main = (config) => {
       proxies: ["百分之一", "十分之一", proxy_name],
     },
     {
-      name: "谷歌应用商店",
-      type: "select",
-      proxies: ["百分之一", "十分之一", proxy_name],
-    },
-    {
       name: "在线播放",
       type: "select",
       proxies: ["十分之一", "百分之一", proxy_name],
@@ -216,7 +211,6 @@ const main = (config) => {
     "RULE-SET,广告,REJECT",
     "RULE-SET,openai,openai",
     "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
-    "DOMAIN-SUFFIX,xn--ngstr-lra8j.com,谷歌应用商店",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
     "RULE-SET,私有域,DIRECT",
