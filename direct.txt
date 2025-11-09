@@ -80,3 +80,4 @@ DOMAIN,vdownload.hembed.com
 DOMAIN-KEYWORD,steam
 DOMAIN-KEYWORD,jm18c
 DOMAIN-SUFFIX,bitwarden.com
+DOMAIN-SUFFIX,zed.dev
