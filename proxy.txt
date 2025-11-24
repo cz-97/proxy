@@ -18,3 +18,4 @@ DOMAIN,img.xn--z4q48lcvpsq0c.com
 DOMAIN-SUFFIX,92mh.com
 DOMAIN,c.y3rts.com
 DOMAIN-KEYWORD,liteapks
+DOMAIN,xiaoyakankan.com
