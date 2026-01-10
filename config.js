@@ -139,14 +139,14 @@ const main = (config) => {
     广告: {
       type: "http",
       behavior: "domain",
-      url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/reject.txt",
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt",
       path: "./ruleset/广告.yaml",
       interval: 86400,
     },
     非中国顶域: {
       type: "http",
       behavior: "domain",
-      url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt",
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/tld-not-cn.txt",
       path: "./ruleset/非中国顶域.yaml",
       interval: 86400,
     },
@@ -154,7 +154,7 @@ const main = (config) => {
     纸飞机IP: {
       type: "http",
       behavior: "ipcidr",
-      url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/telegramcidr.txt",
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt",
       path: "./ruleset/纸飞机IP.yaml",
       interval: 86400,
     },
@@ -162,7 +162,7 @@ const main = (config) => {
     远程直连: {
       type: "http",
       behavior: "domain",
-      url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/direct.txt",
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/direct.txt",
       path: "./ruleset/远程直连.yaml",
       interval: 86400,
     },
@@ -170,7 +170,7 @@ const main = (config) => {
     大陆IP: {
       type: "http",
       behavior: "ipcidr",
-      url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/cncidr.txt",
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/cncidr.txt",
       path: "./ruleset/大陆IP.yaml",
       interval: 86400,
     },
@@ -178,7 +178,7 @@ const main = (config) => {
     私有域: {
       type: "http",
       behavior: "domain",
-      url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/private.txt",
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/private.txt",
       path: "./ruleset/私有域.yaml",
       interval: 86400,
     },
@@ -186,7 +186,7 @@ const main = (config) => {
     局域网IP及保留IP: {
       type: "http",
       behavior: "ipcidr",
-      url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/lancidr.txt",
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/lancidr.txt",
       path: "./ruleset/局域网IP及保留IP.yaml",
       interval: 86400,
     },
@@ -194,7 +194,7 @@ const main = (config) => {
     远程代理: {
       type: "http",
       behavior: "domain",
-      url: "https://raw.gitmirror.com/Loyalsoldier/clash-rules/release/proxy.txt",
+      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/proxy.txt",
       path: "./ruleset/远程代理.yaml",
       interval: 86400,
     },
