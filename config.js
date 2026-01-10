@@ -5,7 +5,7 @@ const main = (config) => {
 
   十分之一 = [];
   百分之一 = [];
-  openai = [];
+  外国AI = [];
   代理组 = [];
 
   const proxies = config["proxies"];
@@ -22,14 +22,8 @@ const main = (config) => {
     if (name.includes("0.01")) {
       百分之一.push(name);
     }
-    if (
-      name.includes("台湾") ||
-      name.includes("新加坡") ||
-      name.includes("日本") ||
-      name.includes("韩国") ||
-      name.includes("美国")
-    ) {
-      openai.push(name);
+    if (!name.includes("香港")) {
+      外国AI.push(name);
     }
   }
 
@@ -42,9 +36,9 @@ const main = (config) => {
       proxies: ["自动选择", ...代理组],
     },
     {
-      name: "openai",
+      name: "外国AI",
       type: "select",
-      proxies: openai,
+      proxies: 外国AI,
     },
     {
       name: "github发行版",
@@ -94,13 +88,13 @@ const main = (config) => {
 
   // 添加 rule-providers
   config["rule-providers"] = {
-    openai: {
+    外国AI: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/openai.txt",
+      url: "https://raw.githubusercontent.com/cz-97/proxy/main/foreign_ai.txt",
       format: "text",
       interval: 86400,
-      path: "./openai.txt",
+      path: "./foreign_ai.txt",
     },
     在线: {
       behavior: "classical",
@@ -209,7 +203,7 @@ const main = (config) => {
   // 添加 rules
   config["rules"] = [
     "RULE-SET,广告,REJECT",
-    "RULE-SET,openai,openai",
+    "RULE-SET,外国AI,外国AI",
     "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
