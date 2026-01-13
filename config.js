@@ -39,6 +39,7 @@ const main = (config) => {
       name: "外国AI",
       type: "fallback",
       proxies: 外国AI,
+      interval: 300
     },
     {
       name: "github发行版",
