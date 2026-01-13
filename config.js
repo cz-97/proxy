@@ -37,7 +37,7 @@ const main = (config) => {
     },
     {
       name: "外国AI",
-      type: "select",
+      type: "fallback",
       proxies: 外国AI,
     },
     {
@@ -70,7 +70,7 @@ const main = (config) => {
     },
     {
       name: "十分之一",
-      type: "url-test",
+      type: "fallback",
       proxies: 十分之一,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
@@ -78,7 +78,7 @@ const main = (config) => {
     },
     {
       name: "百分之一",
-      type: "url-test",
+      type: "fallback",
       proxies: 百分之一,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
