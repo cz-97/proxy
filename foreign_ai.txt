@@ -9,5 +9,9 @@ DOMAIN-SUFFIX,bard.google.com
 DOMAIN-SUFFIX,deepmind.com
 DOMAIN-SUFFIX,deepmind.google
 DOMAIN-SUFFIX,generativeai.google
-DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,apis.google.com
+DOMAIN-SUFFIX,play.google.com
+DOMAIN-SUFFIX,android.clients.google.com
+DOMAIN-SUFFIX,lh3.googleusercontent.com
+DOMAIN-SUFFIX,gvt1.com
