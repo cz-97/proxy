@@ -5,7 +5,8 @@ const main = (config) => {
 
   十分之一 = [];
   百分之一 = [];
-  外国AI = [];
+  不含香港 = [];
+  不含日本 = [];
   代理组 = [];
 
   const proxies = config["proxies"];
@@ -18,12 +19,15 @@ const main = (config) => {
     代理组.push(name);
     if (name.includes("0.1")) {
       十分之一.push(name);
+      if (!name.includes("香港")) {
+        不含香港.push(name);
+      }
+      if (!name.includes("日本")) {
+        不含日本.push(name);
+      }
     }
     if (name.includes("0.01")) {
       百分之一.push(name);
-    }
-    if (!name.includes("香港")) {
-      外国AI.push(name);
     }
   }
 
@@ -33,14 +37,22 @@ const main = (config) => {
     {
       name: proxy_name,
       type: "select",
-      proxies: ["自动选择", ...代理组],
+      proxies: ["自动选择","十分之一","百分之一", ...代理组],
     },
     {
-      name: "外国AI",
+      name: "不含香港",
       type: "fallback",
-      proxies: 外国AI,
+      proxies: 不含香港,
       url: "http://www.gstatic.com/generate_204",
-      interval: 300,
+      interval: 300
+    },
+    {
+      name: "不含日本",
+      type: "fallback",
+      proxies: 不含日本,
+      url: "http://www.gstatic.com/generate_204",
+      interval: 1800,
+      tolerance: 50,
     },
     {
       name: "github发行版",
@@ -205,8 +217,9 @@ const main = (config) => {
   // 添加 rules
   config["rules"] = [
     "RULE-SET,广告,REJECT",
-    "RULE-SET,外国AI,外国AI",
+    "RULE-SET,外国AI,不含香港",
     "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
+    "DOMAIN-SUFFIX,hanime1.me,不含日本",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
     "RULE-SET,私有域,DIRECT",
