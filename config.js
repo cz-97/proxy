@@ -41,14 +41,14 @@ const main = (config) => {
     },
     {
       name: "不含🇭🇰",
-      type: "fallback",
+      type: "url-test",
       proxies: 不含香港,
       url: "http://www.gstatic.com/generate_204",
       interval: 300
     },
     {
       name: "不含🇯🇵",
-      type: "fallback",
+      type: "url-test",
       proxies: 不含日本,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
@@ -84,7 +84,7 @@ const main = (config) => {
     },
     {
       name: "⅒",
-      type: "fallback",
+      type: "url-test",
       proxies: 十分之一,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
@@ -160,8 +160,8 @@ const main = (config) => {
     },
     广告: {
       type: "http",
-      behavior: "domain",
-      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/reject.txt",
+      behavior: "classical",
+      url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml",
       path: "./ruleset/广告.yaml",
       interval: 86400,
     },
