@@ -37,17 +37,17 @@ const main = (config) => {
     {
       name: proxy_name,
       type: "select",
-      proxies: ["自动选择","十分之一","百分之一", ...代理组],
+      proxies: ["自动选择","⅒","1%", ...代理组],
     },
     {
-      name: "不含香港",
+      name: "不含🇭🇰",
       type: "fallback",
       proxies: 不含香港,
       url: "http://www.gstatic.com/generate_204",
       interval: 300
     },
     {
-      name: "不含日本",
+      name: "不含🇯🇵",
       type: "fallback",
       proxies: 不含日本,
       url: "http://www.gstatic.com/generate_204",
@@ -57,17 +57,17 @@ const main = (config) => {
     {
       name: "github发行版",
       type: "select",
-      proxies: ["百分之一", "十分之一", proxy_name],
+      proxies: ["1%", "⅒", proxy_name],
     },
     {
       name: "在线播放",
       type: "select",
-      proxies: ["十分之一", "百分之一", proxy_name],
+      proxies: ["⅒", "1%", proxy_name],
     },
     {
       name: "下载",
       type: "select",
-      proxies: ["百分之一", "十分之一", proxy_name],
+      proxies: ["1%", "⅒", proxy_name],
     },
     {
       name: "漏网之鱼",
@@ -83,7 +83,7 @@ const main = (config) => {
       tolerance: 50,
     },
     {
-      name: "十分之一",
+      name: "⅒",
       type: "fallback",
       proxies: 十分之一,
       url: "http://www.gstatic.com/generate_204",
@@ -91,7 +91,7 @@ const main = (config) => {
       tolerance: 50,
     },
     {
-      name: "百分之一",
+      name: "1%",
       type: "fallback",
       proxies: 百分之一,
       url: "http://www.gstatic.com/generate_204",
@@ -102,13 +102,21 @@ const main = (config) => {
 
   // 添加 rule-providers
   config["rule-providers"] = {
-    外国AI: {
+    no_hk: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/foreign_ai.txt",
+      url: "https://raw.githubusercontent.com/cz-97/proxy/main/no_hk.txt",
       format: "text",
       interval: 86400,
-      path: "./foreign_ai.txt",
+      path: "./no_hk.txt",
+    },
+    no_jp: {
+      behavior: "classical",
+      type: "http",
+      url: "https://raw.githubusercontent.com/cz-97/proxy/main/no_jp.txt",
+      format: "text",
+      interval: 86400,
+      path: "./no_jp.txt",
     },
     在线: {
       behavior: "classical",
@@ -217,9 +225,9 @@ const main = (config) => {
   // 添加 rules
   config["rules"] = [
     "RULE-SET,广告,REJECT",
-    "RULE-SET,外国AI,不含香港",
+    "RULE-SET,no_hk,不含🇭🇰",
+    "RULE-SET,no_jp,不含🇯🇵",
     "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
-    "DOMAIN-SUFFIX,hanime1.me,不含日本",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
     "RULE-SET,私有域,DIRECT",

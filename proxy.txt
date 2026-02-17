@@ -1,4 +1,3 @@
-DOMAIN-SUFFIX,happymh.com
 DOMAIN-SUFFIX,hanman18.com
 DOMAIN-KEYWORD,manga
 DOMAIN-KEYWORD,z-lib
