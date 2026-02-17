@@ -3,15 +3,12 @@ DOMAIN-KEYWORD,manga
 DOMAIN-KEYWORD,z-lib
 DOMAIN-KEYWORD,hentai
 DOMAIN-KEYWORD,copilot
-DOMAIN-KEYWORD,spacedesk
 DOMAIN-SUFFIX,tldraw.com
 DOMAIN,bakamh.com
 DOMAIN,files2.freedownloadmanager.org
 DOMAIN-SUFFIX,acgfta.com
 DOMAIN-SUFFIX,omofunz.com
-DOMAIN,appflowy.com
-DOMAIN,零元机场.com
-DOMAIN-KEYWORD,google
+DOMAIN-SUFFIX,xn--cp3a08l.com
 DOMAIN,plugins.gradle.org
 DOMAIN,img.xn--z4q48lcvpsq0c.com
 DOMAIN-SUFFIX,92mh.com
