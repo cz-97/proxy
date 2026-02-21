@@ -81,3 +81,11 @@ DOMAIN-KEYWORD,steam
 DOMAIN-KEYWORD,jm18c
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,zed.dev
+PROCESS-NAME-REGEX,(?i)^steam.*\.exe$
+DOMAIN-SUFFIX,steampowered.com
+DOMAIN-SUFFIX,steamcontent.com
+DOMAIN-SUFFIX,steamstatic.com
+DOMAIN-SUFFIX,steamserver.net
+DOMAIN-SUFFIX,steamusercontent.com
+DOMAIN-SUFFIX,steamcommunity.com
+DOMAIN-SUFFIX,steamgames.com
