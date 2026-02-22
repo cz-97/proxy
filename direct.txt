@@ -81,3 +81,6 @@ DOMAIN-KEYWORD,steam
 DOMAIN-KEYWORD,jm18c
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,zed.dev
+PROCESS-NAME,steam.exe
+PROCESS-NAME,steamservice.exe
+PROCESS-NAME,steamwebhelper.exe
