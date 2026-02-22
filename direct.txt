@@ -83,3 +83,4 @@ DOMAIN-SUFFIX,zed.dev
 PROCESS-NAME,steam.exe
 PROCESS-NAME,steamservice.exe
 PROCESS-NAME,steamwebhelper.exe
+DOMAIN-KEYWORD,steam
