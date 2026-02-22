@@ -77,7 +77,6 @@ DOMAIN-SUFFIX,wunderlist.com
 DOMAIN-SUFFIX,yammer.com
 DOMAIN-SUFFIX,yammerusercontent.com
 DOMAIN,vdownload.hembed.com
-DOMAIN-KEYWORD,steam
 DOMAIN-KEYWORD,jm18c
 DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,zed.dev
