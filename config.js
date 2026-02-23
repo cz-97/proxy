@@ -37,47 +37,38 @@ function main(config) {
     {
       name: proxy_name,
       type: "select",
-      proxies: ["⅒","自动选择", "1%", ...代理组],
-    },
-    {
-      name: "不含🇭🇰",
-      type: "url-test",
-      proxies: 不含香港,
-      url: "http://www.gstatic.com/generate_204",
-      interval: 300,
-    },
-    {
-      name: "不含🇯🇵",
-      type: "url-test",
-      proxies: 不含日本,
-      url: "http://www.gstatic.com/generate_204",
-      interval: 1800,
-      tolerance: 50,
-    },
-    {
-      name: "github发行版",
-      type: "select",
-      proxies: ["1%", "⅒", proxy_name],
+      proxies: ["⅒", "自动选择", "1%", ...代理组],
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/default.svg"
     },
     {
       name: "在线播放",
       type: "select",
       proxies: ["⅒", "1%", proxy_name],
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/online.svg"
+    },
+    {
+      name: "github发行版",
+      type: "select",
+      proxies: ["1%", "⅒", proxy_name],
+      icon: "https://github.com/fluidicon.png"
     },
     {
       name: "下载",
       type: "select",
       proxies: ["1%", "⅒", proxy_name],
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/download.svg"
     },
     {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/fish.svg"
     },
     {
       name: "自动选择",
       type: "url-test",
       proxies: 代理组,
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/auto.svg",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -86,6 +77,24 @@ function main(config) {
       name: "⅒",
       type: "url-test",
       proxies: 十分之一,
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0.1.svg",
+      url: "http://www.gstatic.com/generate_204",
+      interval: 1800,
+      tolerance: 50,
+    },
+    {
+      name: "不含🇭🇰",
+      type: "url-test",
+      proxies: 不含香港,
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg",
+      url: "http://www.gstatic.com/generate_204",
+      interval: 300,
+    },
+    {
+      name: "不含🇯🇵",
+      type: "url-test",
+      proxies: 不含日本,
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -94,6 +103,7 @@ function main(config) {
       name: "1%",
       type: "fallback",
       proxies: 百分之一,
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0.01.svg",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
