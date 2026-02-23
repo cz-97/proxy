@@ -8,8 +8,8 @@ DOMAIN,bakamh.com
 DOMAIN,files2.freedownloadmanager.org
 DOMAIN-SUFFIX,acgfta.com
 DOMAIN-SUFFIX,omofunz.com
-DOMAIN-KEYWORD,pqjc
-DOMAIN-KEYWORD,赔钱
+DOMAIN,赔钱机场.site
+DOMAIN,赔钱机场.com
 DOMAIN,plugins.gradle.org
 DOMAIN,img.xn--z4q48lcvpsq0c.com
 DOMAIN-SUFFIX,92mh.com

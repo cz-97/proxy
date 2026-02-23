@@ -1,4 +1,4 @@
-const main = (config) => {
+function main(config) {
   config["proxy-groups"] = [];
   config["rules"] = [];
   config["rule-providers"] = {};
@@ -37,14 +37,14 @@ const main = (config) => {
     {
       name: proxy_name,
       type: "select",
-      proxies: ["自动选择","⅒","1%", ...代理组],
+      proxies: ["⅒","自动选择", "1%", ...代理组],
     },
     {
       name: "不含🇭🇰",
       type: "url-test",
       proxies: 不含香港,
       url: "http://www.gstatic.com/generate_204",
-      interval: 300
+      interval: 300,
     },
     {
       name: "不含🇯🇵",
@@ -246,4 +246,4 @@ const main = (config) => {
   ];
 
   return config;
-};
+}
