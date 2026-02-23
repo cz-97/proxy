@@ -103,7 +103,6 @@ function main(config) {
       name: "1%",
       type: "fallback",
       proxies: 百分之一,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0.01.svg",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
