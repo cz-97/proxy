@@ -5,8 +5,8 @@ function main(config) {
 
   十分之一 = [];
   百分之一 = [];
-  不含香港 = [];
-  不含日本 = [];
+  排除香港 = [];
+  排除日本 = [];
   代理组 = [];
 
   const proxies = config["proxies"];
@@ -20,10 +20,10 @@ function main(config) {
     if (name.includes("0.1")) {
       十分之一.push(name);
       if (!name.includes("香港")) {
-        不含香港.push(name);
+        排除香港.push(name);
       }
       if (!name.includes("日本")) {
-        不含日本.push(name);
+        排除日本.push(name);
       }
     }
     if (name.includes("0.01")) {
@@ -37,32 +37,32 @@ function main(config) {
     {
       name: proxy_name,
       type: "select",
-      proxies: ["⅒", "自动选择", "1%", ...代理组],
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/default.svg"
+      proxies: ["0.1倍率", "0.01倍率", "自动选择", ...代理组],
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/default.svg",
     },
     {
       name: "在线播放",
       type: "select",
-      proxies: ["⅒", "1%", proxy_name],
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/online.svg"
+      proxies: ["0.1倍率", "0.01倍率", proxy_name],
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/online.svg",
     },
     {
       name: "github发行版",
       type: "select",
-      proxies: ["1%", "⅒", proxy_name],
-      icon: "https://github.com/fluidicon.png"
+      proxies: ["0.01倍率", "0.1倍率", proxy_name],
+      icon: "https://github.com/fluidicon.png",
     },
     {
       name: "下载",
       type: "select",
-      proxies: ["1%", "⅒", proxy_name],
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/download.svg"
+      proxies: ["0.01倍率", "0.1倍率", proxy_name],
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/download.svg",
     },
     {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/fish.svg"
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/fish.svg",
     },
     {
       name: "自动选择",
@@ -74,7 +74,7 @@ function main(config) {
       tolerance: 50,
     },
     {
-      name: "⅒",
+      name: "0.1倍率",
       type: "url-test",
       proxies: 十分之一,
       icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0.1.svg",
@@ -83,26 +83,27 @@ function main(config) {
       tolerance: 50,
     },
     {
-      name: "不含🇭🇰",
+      name: "排除🇭🇰",
       type: "url-test",
-      proxies: 不含香港,
+      proxies: 排除香港,
       icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg",
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
     },
     {
-      name: "不含🇯🇵",
+      name: "排除🇯🇵",
       type: "url-test",
-      proxies: 不含日本,
+      proxies: 排除日本,
       icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
     },
     {
-      name: "1%",
+      name: "0.01倍率",
       type: "fallback",
       proxies: 百分之一,
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0.01.png",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -234,8 +235,8 @@ function main(config) {
   // 添加 rules
   config["rules"] = [
     "RULE-SET,广告,REJECT",
-    "RULE-SET,no_hk,不含🇭🇰",
-    "RULE-SET,no_jp,不含🇯🇵",
+    "RULE-SET,no_hk,排除🇭🇰",
+    "RULE-SET,no_jp,排除🇯🇵",
     "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
