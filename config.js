@@ -103,7 +103,7 @@ function main(config) {
       name: "0.01倍率",
       type: "fallback",
       proxies: 百分之一,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0p01.svg",
+      icon: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTI4IDEyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4NCjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzJFQ0M3MSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjE0Ij4NCjxwYXRoIGQ9Im0xMCAyNSAxNS0xMHY5MCIvPg0KPGxpbmUgeDE9IjEwIiB4Mj0iNDAiIHkxPSIxMTAiIHkyPSIxMTAiLz4NCjxjaXJjbGUgY3g9IjY1IiBjeT0iMzUiIHI9IjE1Ii8+DQo8Y2lyY2xlIGN4PSIxMDUiIGN5PSI5NSIgcj0iMTUiLz4NCjxsaW5lIHgxPSI2MCIgeDI9IjExMCIgeTE9IjExMCIgeTI9IjIwIi8+DQo8L2c+DQo8L3N2Zz4=",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
