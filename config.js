@@ -103,7 +103,7 @@ function main(config) {
       name: "0.01倍率",
       type: "fallback",
       proxies: 百分之一,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0.01.svg",
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0p01.svg",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
