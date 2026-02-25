@@ -17,3 +17,4 @@ DOMAIN,c.y3rts.com
 DOMAIN-KEYWORD,liteapks
 DOMAIN,xiaoyakankan.com
 DOMAIN-KEYWORD,grok
+DOMAIN,ziglang.org
