@@ -84,3 +84,5 @@ PROCESS-NAME,steam.exe
 PROCESS-NAME,steamservice.exe
 PROCESS-NAME,steamwebhelper.exe
 DOMAIN-KEYWORD,steam
+DOMAIN-SUFFIX,bgm.tv
+DOMAIN-SUFFIX,bangumi.tv
