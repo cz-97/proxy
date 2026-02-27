@@ -1,9 +1,1 @@
-<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-<g fill="none" stroke="#2ECC71" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
-<path d="m10 25 15-10v90"/>
-<line x1="10" x2="40" y1="110" y2="110"/>
-<circle cx="65" cy="35" r="15"/>
-<circle cx="105" cy="95" r="15"/>
-<line x1="60" x2="110" y1="110" y2="20"/>
-</g>
-</svg>
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#2ecc71" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"><path d="m10 35 15-10v75m-15 0h30"/><ellipse cx="70" cy="45" rx="12" ry="15"/><ellipse cx="110" cy="85" rx="12" ry="15"/><path d="m60 100 60-70"/></g></svg>
