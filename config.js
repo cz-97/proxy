@@ -61,7 +61,7 @@ function main(config) {
     {
       name: "漏网之鱼",
       type: "select",
-      proxies: ["DIRECT"， proxy_name],
+      proxies: ["DIRECT", proxy_name],
       icon: "https://raw.githubusercontent.com/cz-97/proxy/main/fish.svg",
     },
     {
@@ -86,8 +86,8 @@ function main(config) {
       name: "排除🇭🇰",
       type: "url-test",
       proxies: 排除香港,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg"，
-      url: "http://www.gstatic.com/generate_204"，
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg",
+      url: "http://www.gstatic.com/generate_204",
       interval: 300,
     },
     {
