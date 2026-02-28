@@ -61,7 +61,7 @@ function main(config) {
     {
       name: "漏网之鱼",
       type: "select",
-      proxies: ["DIRECT", proxy_name],
+      proxies: ["DIRECT"， proxy_name],
       icon: "https://raw.githubusercontent.com/cz-97/proxy/main/fish.svg",
     },
     {
@@ -86,8 +86,8 @@ function main(config) {
       name: "排除🇭🇰",
       type: "url-test",
       proxies: 排除香港,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg",
-      url: "http://www.gstatic.com/generate_204",
+      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg"，
+      url: "http://www.gstatic.com/generate_204"，
       interval: 300,
     },
     {
@@ -103,7 +103,7 @@ function main(config) {
       name: "0.01倍率",
       type: "fallback",
       proxies: 百分之一,
-      icon: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTI4IDEyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyZWNjNzEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxMiI+PHBhdGggZD0ibTEwIDM1IDE1LTEwdjc1bS0xNSAwaDMwIi8+PGVsbGlwc2UgY3g9IjcwIiBjeT0iNDUiIHJ4PSIxMiIgcnk9IjE1Ii8+PGVsbGlwc2UgY3g9IjExMCIgY3k9Ijg1IiByeD0iMTIiIHJ5PSIxNSIvPjxwYXRoIGQ9Im02MCAxMDAgNjAtNzAiLz48L2c+PC9zdmc+",
+      icon: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTI4IDEyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyZWNjNzEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxMiI+PHBhdGggZD0ibTEwIDM4IDE1LTEwdjc1bS0xNSAwaDMwIi8+PGVsbGlwc2UgY3g9IjcwIiBjeT0iNDUiIHJ4PSIxMiIgcnk9IjE1Ii8+PGVsbGlwc2UgY3g9IjExMCIgY3k9Ijg1IiByeD0iMTIiIHJ5PSIxNSIvPjxwYXRoIGQ9Im02MCAxMDAgNjAtNzAiLz48L2c+PC9zdmc+",
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
