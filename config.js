@@ -32,43 +32,45 @@ function main(config) {
   }
 
   const proxy_name = "默认代理";
+  const base_url = "https://raw.githubusercontent.com/cz-97/proxy/main/";
+
   // 添加新的 proxy-groups
   config["proxy-groups"] = [
     {
       name: proxy_name,
       type: "select",
       proxies: ["0.1倍率", "0.01倍率", "自动选择", ...代理组],
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/default.svg",
+      icon: `${base_url}default.svg`,
     },
     {
       name: "在线播放",
       type: "select",
       proxies: ["0.1倍率", "0.01倍率", proxy_name],
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/online.svg",
+      icon: `${base_url}online.svg`,
     },
     {
       name: "github发行版",
       type: "select",
       proxies: ["0.01倍率", "0.1倍率", proxy_name],
-      icon: "https://github.com/fluidicon.png",
+      icon: `${base_url}github.svg`,
     },
     {
       name: "下载",
       type: "select",
       proxies: ["0.01倍率", "0.1倍率", proxy_name],
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/download.svg",
+      icon: `${base_url}download.svg`,
     },
     {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/fish.svg",
+      icon: `${base_url}fish.svg`,
     },
     {
       name: "自动选择",
       type: "url-test",
       proxies: 代理组,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/auto.svg",
+      icon: `${base_url}auto.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -77,7 +79,7 @@ function main(config) {
       name: "0.1倍率",
       type: "url-test",
       proxies: 十分之一,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/0.1.svg",
+      icon: `${base_url}0.1.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -86,7 +88,7 @@ function main(config) {
       name: "排除🇭🇰",
       type: "url-test",
       proxies: 排除香港,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg",
+      icon: `${base_url}disable.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
     },
@@ -94,7 +96,7 @@ function main(config) {
       name: "排除🇯🇵",
       type: "url-test",
       proxies: 排除日本,
-      icon: "https://raw.githubusercontent.com/cz-97/proxy/main/disable.svg",
+      icon: `${base_url}disable.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -103,7 +105,7 @@ function main(config) {
       name: "0.01倍率",
       type: "fallback",
       proxies: 百分之一,
-      icon: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTI4IDEyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyZWNjNzEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxMiI+PHBhdGggZD0ibTEwIDM4IDE1LTEwdjc1bS0xNSAwaDMwIi8+PGVsbGlwc2UgY3g9IjcwIiBjeT0iNDUiIHJ4PSIxMiIgcnk9IjE1Ii8+PGVsbGlwc2UgY3g9IjExMCIgY3k9Ijg1IiByeD0iMTIiIHJ5PSIxNSIvPjxwYXRoIGQ9Im02MCAxMDAgNjAtNzAiLz48L2c+PC9zdmc+",
+      icon: `${base_url}0.01.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -115,7 +117,7 @@ function main(config) {
     no_hk: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/no_hk.txt",
+      url: `${base_url}no_hk.txt`,
       format: "text",
       interval: 86400,
       path: "./no_hk.txt",
@@ -123,7 +125,7 @@ function main(config) {
     no_jp: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/no_jp.txt",
+      url: `${base_url}no_jp.txt`,
       format: "text",
       interval: 86400,
       path: "./no_jp.txt",
@@ -131,7 +133,7 @@ function main(config) {
     在线: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/online.txt",
+      url: `${base_url}online.txt`,
       format: "text",
       interval: 86400,
       path: "./在线.txt",
@@ -139,7 +141,7 @@ function main(config) {
     下载: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/download.txt",
+      url: `${base_url}download.txt`,
       format: "text",
       interval: 86400,
       path: "./下载.txt",
@@ -147,7 +149,7 @@ function main(config) {
     预代理: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/pre_proxy.txt",
+      url: `${base_url}pre_proxy.txt`,
       format: "text",
       interval: 86400,
       path: "./预代理.txt",
@@ -155,7 +157,7 @@ function main(config) {
     我的代理: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/proxy.txt",
+      url: `${base_url}proxy.txt`,
       format: "text",
       interval: 86400,
       path: "./我的代理.txt",
@@ -163,7 +165,7 @@ function main(config) {
     我的直连: {
       behavior: "classical",
       type: "http",
-      url: "https://raw.githubusercontent.com/cz-97/proxy/main/direct.txt",
+      url: `${base_url}direct.txt`,
       format: "text",
       interval: 86400,
       path: "./我的直连.txt",
