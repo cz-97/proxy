@@ -3,7 +3,7 @@
  * 读取 config.js 同目录下的 SVG 文件，将所有
  * `${base_url}文件名.svg` 替换为 base64，输出为 config_base64_icon.js
  *
- * 用法：bun replace_icons.js <config.js路径>
+ * 用法：bun svg2b64.js
  */
 
 import { readFile, writeFile } from "fs/promises";
