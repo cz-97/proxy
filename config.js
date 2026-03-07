@@ -34,7 +34,6 @@ function main(config) {
   const proxy_name = "默认代理";
   const base_url = "https://raw.githubusercontent.com/cz-97/proxy/main/";
 
-  // 添加新的 proxy-groups
   config["proxy-groups"] = [
     {
       name: proxy_name,
@@ -112,7 +111,6 @@ function main(config) {
     },
   ];
 
-  // 添加 rule-providers
   config["rule-providers"] = {
     no_hk: {
       behavior: "classical",
@@ -234,7 +232,6 @@ function main(config) {
     },
   };
 
-  // 添加 rules
   config["rules"] = [
     "RULE-SET,广告,REJECT",
     "RULE-SET,no_hk,排除🇭🇰",
