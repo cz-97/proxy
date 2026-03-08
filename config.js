@@ -112,6 +112,14 @@ function main(config) {
   ];
 
   config["rule-providers"] = {
+    low_delay: {
+      behavior: "classical",
+      type: "http",
+      url: `${base_url}low_delay.txt`,
+      format: "text",
+      interval: 86400,
+      path: "./low_delay.txt",
+    },
     no_hk: {
       behavior: "classical",
       type: "http",
@@ -234,9 +242,6 @@ function main(config) {
 
   config["rules"] = [
     "RULE-SET,广告,REJECT",
-    "RULE-SET,no_hk,排除🇭🇰",
-    "RULE-SET,no_jp,排除🇯🇵",
-    "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
     "RULE-SET,私有域,DIRECT",
@@ -245,6 +250,10 @@ function main(config) {
     "GEOIP,LAN,DIRECT",
     "GEOIP,CN,DIRECT",
     "RULE-SET,我的直连,DIRECT",
+    "RULE-SET,low_delay,自动选择",
+    "RULE-SET,no_hk,排除🇭🇰",
+    "RULE-SET,no_jp,排除🇯🇵",
+    "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
     "RULE-SET,在线,在线播放",
     "RULE-SET,下载,下载",
     `RULE-SET,我的代理,${proxy_name}`,
