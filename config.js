@@ -3,11 +3,11 @@ function main(config) {
   config["rules"] = [];
   config["rule-providers"] = {};
 
-  十分之一 = [];
-  百分之一 = [];
-  排除香港 = [];
-  排除日本 = [];
-  代理组 = [];
+  let 十分之一 = [];
+  let 百分之一 = [];
+  let 排除香港 = [];
+  let 排除日本 = [];
+  let 代理组 = [];
 
   const proxies = config["proxies"];
 
@@ -29,6 +29,19 @@ function main(config) {
     if (name.includes("0.01")) {
       百分之一.push(name);
     }
+  }
+
+  if (十分之一.length === 0) {
+    十分之一 = 代理组;
+  }
+  if (排除香港.length === 0) {
+    排除香港 = 十分之一;
+  }
+  if (排除日本.length === 0) {
+    排除日本 = 十分之一;
+  }
+  if (百分之一.length === 0) {
+    百分之一 = 十分之一;
   }
 
   const proxy_name = "默认代理";
