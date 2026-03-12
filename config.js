@@ -73,6 +73,12 @@ function main(config) {
       icon: `${base_url}download.svg`,
     },
     {
+      name: "纸飞机",
+      type: "select",
+      proxies: ["0.01倍率", "0.1倍率", proxy_name],
+      icon: `${base_url}telegram.svg`,
+    },
+    {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
@@ -263,6 +269,7 @@ function main(config) {
     "GEOIP,LAN,DIRECT",
     "GEOIP,CN,DIRECT",
     "RULE-SET,我的直连,DIRECT",
+    `RULE-SET,纸飞机IP,纸飞机`,
     "RULE-SET,low_delay,自动选择",
     "RULE-SET,no_hk,排除🇭🇰",
     "RULE-SET,no_jp,排除🇯🇵",
@@ -272,7 +279,6 @@ function main(config) {
     `RULE-SET,我的代理,${proxy_name}`,
     `RULE-SET,远程代理,${proxy_name}`,
     `RULE-SET,非中国顶域,${proxy_name}`,
-    `RULE-SET,纸飞机IP,${proxy_name}`,
     "MATCH,漏网之鱼",
   ];
 

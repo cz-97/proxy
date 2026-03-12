@@ -73,6 +73,12 @@ function main(config) {
       icon: "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PHBhdGggZD0iTTkzOC44NTYgNjM4Ljc3NnYyNzAuM2MwIDI3LjQxLTIyLjIxMSA0OS42MzQtNDkuNjIxIDQ5LjYzNEgxMzQuNzkyYy0yNy40MSAwLTQ5LjY0OC0yMi4yMjQtNDkuNjQ4LTQ5LjYzNHYtMjcwLjNjMC0yNy40MSAyMi4yMjQtNDkuNjM0IDQ5LjYzNS00OS42MzRzNDkuNjM0IDIyLjIyNCA0OS42MzQgNDkuNjM0djIyMC42NjVoNjU1LjE3NFY2MzguNzc2YzAtMjcuNDEgMjIuMjI0LTQ5LjYzNCA0OS42MzQtNDkuNjM0czQ5LjYzNSAyMi4yMjQgNDkuNjM1IDQ5LjYzNG0tNDYyLjMwNCA2Mi4yNTFhNDkuNjM1IDQ5LjYzNSAwIDAgMCA3MC45MjIgMEw3NDUuNDg5IDQ5OC44NmMxOS4xOC0xOS41ODMgMTguODU1LTUxLjAwNy0uNzMzLTcwLjE5LTE5LjU4Ny0xOS4xNzctNTEuMDE3LTE4Ljg1Ni03MC4xOTcuNzNMNTYxLjYzNCA1NDQuNjg3VjExNC45MjRjMC0yNy40MS0yMi4yMjQtNDkuNjM0LTQ5LjYzNC00OS42MzRzLTQ5LjYzNCAyMi4yMjQtNDkuNjM0IDQ5LjYzNFY1NDQuNjhMMzQ5LjQ3MyA0MjkuNDAxYy0xOS4xOC0xOS41ODMtNTAuNTktMTkuOTAzLTcwLjE4Ni0uNzMyLTE5LjU4MyAxOS4xOC0xOS45MSA1MC42MDQtLjczIDcwLjE5eiIgZmlsbD0iIzNjYjYwZCIvPjwvc3ZnPg==",
     },
     {
+      name: "纸飞机",
+      type: "select",
+      proxies: ["0.01倍率", "0.1倍率", proxy_name],
+      icon: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjgwMCIgdmlld0JveD0iMCAwIDMyIDMyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE0IiBmaWxsPSJ1cmwoI2EpIi8+PHBhdGggZD0iTTIyLjk4NyAxMC4yMDljLjEyNC0uODA2LS42NDItMS40NDEtMS4zNTgtMS4xMjdMNy4zNjUgMTUuMzQ1Yy0uNTE0LjIyNS0uNDc2IDEuMDAzLjA1NiAxLjE3M2wyLjk0Mi45MzdjLjU2Mi4xNzkgMS4xNy4wODYgMS42Ni0uMjUzbDYuNjMyLTQuNTgyYy4yLS4xMzguNDE4LjE0Ny4yNDcuMzIzbC00Ljc3NCA0LjkyMmMtLjQ2My40NzctLjM3MSAxLjI4Ni4xODYgMS42MzZsNS4zNDUgMy4zNTFjLjYuMzc2IDEuMzctLjAwMSAxLjQ4My0uNzI2eiIgZmlsbD0iI2ZmZiIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjE2IiB5MT0iMiIgeDI9IjE2IiB5Mj0iMzAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMzdiYmZlIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA3ZGJiIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+",
+    },
+    {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
@@ -263,6 +269,7 @@ function main(config) {
     "GEOIP,LAN,DIRECT",
     "GEOIP,CN,DIRECT",
     "RULE-SET,我的直连,DIRECT",
+    `RULE-SET,纸飞机IP,纸飞机`,
     "RULE-SET,low_delay,自动选择",
     "RULE-SET,no_hk,排除🇭🇰",
     "RULE-SET,no_jp,排除🇯🇵",
@@ -272,7 +279,6 @@ function main(config) {
     `RULE-SET,我的代理,${proxy_name}`,
     `RULE-SET,远程代理,${proxy_name}`,
     `RULE-SET,非中国顶域,${proxy_name}`,
-    `RULE-SET,纸飞机IP,${proxy_name}`,
     "MATCH,漏网之鱼",
   ];
 
