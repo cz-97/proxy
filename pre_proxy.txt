@@ -1,2 +1,3 @@
 DOMAIN,copilot.microsoft.com
 DOMAIN,c2rsetup.officeapps.live.com
+DOMAIN,steamcommunity.com
