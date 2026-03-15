@@ -1,4 +1,3 @@
 DOMAIN-SUFFIX,akamaized.net
 DOMAIN,dm1.xfdm.pro
-DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,telesco.pe
+DOMAIN,release-assets.githubusercontent.com

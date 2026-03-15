@@ -61,12 +61,6 @@ function main(config) {
       icon: `${base_url}online.svg`,
     },
     {
-      name: "github发行版",
-      type: "select",
-      proxies: ["0.01倍率", "0.1倍率", proxy_name],
-      icon: `${base_url}github.svg`,
-    },
-    {
       name: "下载",
       type: "select",
       proxies: ["0.01倍率", "0.1倍率", proxy_name],
@@ -273,7 +267,6 @@ function main(config) {
     "RULE-SET,low_delay,自动选择",
     "RULE-SET,no_hk,排除🇭🇰",
     "RULE-SET,no_jp,排除🇯🇵",
-    "DOMAIN-SUFFIX,githubusercontent.com,github发行版",
     "RULE-SET,在线,在线播放",
     "RULE-SET,下载,下载",
     `RULE-SET,我的代理,${proxy_name}`,
