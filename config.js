@@ -115,7 +115,7 @@ function main(config) {
     },
     {
       name: "0.01倍率",
-      type: "fallback",
+      type: "url-test",
       proxies: 百分之一,
       icon: `${base_url}0.01.svg`,
       url: "http://www.gstatic.com/generate_204",

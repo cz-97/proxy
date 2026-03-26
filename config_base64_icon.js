@@ -115,7 +115,7 @@ function main(config) {
     },
     {
       name: "0.01倍率",
-      type: "fallback",
+      type: "url-test",
       proxies: 百分之一,
       icon: "data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMTI4IDEyOCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBzdHJva2U9IiMyZWNjNzEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxMiI+PHBhdGggZD0ibTggMzggMTUtMTB2NzBtLTE1IDJoMzAiLz48ZWxsaXBzZSBjeD0iNjgiIGN5PSI0NSIgcng9IjEyIiByeT0iMTUiLz48ZWxsaXBzZSBjeD0iMTA4IiBjeT0iODUiIHJ4PSIxMiIgcnk9IjE1Ii8+PHBhdGggZD0ibTU4IDEwMCA2MC03MCIvPjwvZz48L3N2Zz4=",
       url: "http://www.gstatic.com/generate_204",
