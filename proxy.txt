@@ -11,3 +11,4 @@ DOMAIN,赔钱机场.com
 DOMAIN,plugins.gradle.org
 DOMAIN,xiaoyakankan.com
 DOMAIN,ziglang.org
+DOMAIN-SUFFIX,92mh.com
