@@ -12,3 +12,4 @@ DOMAIN,plugins.gradle.org
 DOMAIN,xiaoyakankan.com
 DOMAIN,ziglang.org
 DOMAIN-SUFFIX,92mh.com
+DOMAIN,i.hamreus.com
