@@ -19,12 +19,12 @@ function main(config) {
     代理组.push(name);
     if (name.includes("0.1")) {
       十分之一.push(name);
-      if (!name.includes("香港")) {
-        排除香港.push(name);
-      }
-      if (!name.includes("日本")) {
-        排除日本.push(name);
-      }
+    }
+    if (!name.includes("香港")) {
+      排除香港.push(name);
+    }
+    if (!name.includes("日本")) {
+      排除日本.push(name);
     }
     if (name.includes("0.01")) {
       百分之一.push(name);
