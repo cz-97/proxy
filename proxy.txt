@@ -13,3 +13,4 @@ DOMAIN,xiaoyakankan.com
 DOMAIN,ziglang.org
 DOMAIN-SUFFIX,92mh.com
 DOMAIN,i.hamreus.com
+DOMAIN,roum22.xyz

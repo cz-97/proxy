@@ -2,3 +2,4 @@ DOMAIN-SUFFIX,hanime1.me
 DOMAIN-SUFFIX,happymh.com
 DOMAIN-SUFFIX,new.hentaini.com
 DOMAIN-KEYWORD,grok
+DOMAIN-SUFFIX,18comic.vip
