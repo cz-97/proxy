@@ -84,3 +84,4 @@ PROCESS-NAME,steam.exe
 PROCESS-NAME,steamservice.exe
 PROCESS-NAME,steamwebhelper.exe
 DOMAIN-KEYWORD,steam
+DOMAIN-KEYWORD,outlook
