@@ -1,5 +1,3 @@
 DOMAIN-KEYWORD,openai
 DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,claude.ai
-DOMaIN-kEYWORD,google
-DOMAIN-SUFFIX,deepmind.com
