@@ -204,11 +204,11 @@ function main(config) {
       interval: 86400,
     },
 
-    纸飞机IP: {
+    纸飞机: {
       type: "http",
-      behavior: "ipcidr",
-      url: "https://raw.githubusercontent.com/Loyalsoldier/clash-rules/release/telegramcidr.txt",
-      path: "./ruleset/纸飞机IP.yaml",
+      behavior: "classical",
+      url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml",
+      path: "./ruleset/纸飞机.yaml",
       interval: 86400,
     },
 
@@ -263,7 +263,7 @@ function main(config) {
     "GEOIP,LAN,DIRECT",
     "GEOIP,CN,DIRECT",
     "RULE-SET,我的直连,DIRECT",
-    `RULE-SET,纸飞机IP,纸飞机`,
+    `RULE-SET,纸飞机,纸飞机`,
     "RULE-SET,low_delay,自动选择",
     "RULE-SET,no_hk,排除🇭🇰",
     "RULE-SET,no_jp,排除🇯🇵",
