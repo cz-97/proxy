@@ -14,7 +14,7 @@ const configPath = join(dir, "config.js");
 let content = await readFile(configPath, "utf-8");
 
 const pattern = /`\$\{base_url\}([^`]+\.svg)`/g;
-const svgNames = [...new Set([...content.matchAll(pattern)].map(m => m[1]))];
+const svgNames = [...new Set([...content.matchAll(pattern)].map((m) => m[1]))];
 
 // 读取所有涉及的 SVG 文件
 const icons = {};
