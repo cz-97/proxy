@@ -14,6 +14,5 @@ DOMAIN,ziglang.org
 DOMAIN-SUFFIX,92mh.com
 DOMAIN,i.hamreus.com
 DOMAIN,roum22.xyz
-DOMAIN,anich.sends.eu.org
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,freedownloadmanager.org
