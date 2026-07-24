@@ -1,3 +1,1 @@
-DOMAIN-SUFFIX,akamaized.net
-DOMAIN,dm1.xfdm.pro
 DOMAIN,release-assets.githubusercontent.com
