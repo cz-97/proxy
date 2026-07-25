@@ -1,4 +1,4 @@
-DOMAIN,v16m-default.akamaized.net
+3DOMAIN,v16m-default.akamaized.net
 DOMAIN-KEYWORD,agedm
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,aadrm.com
@@ -84,4 +84,3 @@ PROCESS-NAME,steamservice.exe
 PROCESS-NAME,steamwebhelper.exe
 DOMAIN-KEYWORD,steam
 DOMAIN-KEYWORD,outlook
-DOMAIN-KEYWORD,vdownload
