@@ -73,6 +73,11 @@ function main(config) {
       icon: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjgwMCIgdmlld0JveD0iMCAwIDMyIDMyIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjE0IiBmaWxsPSJ1cmwoI2EpIi8+PHBhdGggZD0iTTIyLjk4NyAxMC4yMDljLjEyNC0uODA2LS42NDItMS40NDEtMS4zNTgtMS4xMjdMNy4zNjUgMTUuMzQ1Yy0uNTE0LjIyNS0uNDc2IDEuMDAzLjA1NiAxLjE3M2wyLjk0Mi45MzdjLjU2Mi4xNzkgMS4xNy4wODYgMS42Ni0uMjUzbDYuNjMyLTQuNTgyYy4yLS4xMzguNDE4LjE0Ny4yNDcuMzIzbC00Ljc3NCA0LjkyMmMtLjQ2My40NzctLjM3MSAxLjI4Ni4xODYgMS42MzZsNS4zNDUgMy4zNTFjLjYuMzc2IDEuMzctLjAwMSAxLjQ4My0uNzI2eiIgZmlsbD0iI2ZmZiIvPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjE2IiB5MT0iMiIgeDI9IjE2IiB5Mj0iMzAiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj48c3RvcCBzdG9wLWNvbG9yPSIjMzdiYmZlIi8+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMDA3ZGJiIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PC9zdmc+",
     },
     {
+      name: "anime1",
+      type: "select",
+      proxies: ["DIRECT", proxy_name],
+    },
+    {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
@@ -255,6 +260,7 @@ function main(config) {
 
   config["rules"] = [
     "RULE-SET,广告,REJECT",
+    "DOMAIN-KEYWORD,vdownload,anime1",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
     "RULE-SET,私有域,DIRECT",

@@ -73,6 +73,11 @@ function main(config) {
       icon: `${base_url}telegram.svg`,
     },
     {
+      name: "anime1",
+      type: "select",
+      proxies: ["DIRECT", proxy_name],
+    },
+    {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
@@ -255,6 +260,7 @@ function main(config) {
 
   config["rules"] = [
     "RULE-SET,广告,REJECT",
+    "DOMAIN-KEYWORD,vdownload,anime1",
     `RULE-SET,预代理,${proxy_name}`,
     "RULE-SET,远程直连,DIRECT",
     "RULE-SET,私有域,DIRECT",
