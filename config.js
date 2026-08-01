@@ -46,48 +46,51 @@ function main(config) {
 
   const proxy_name = "默认代理";
   const base_url = "https://raw.githubusercontent.com/cz-97/proxy/main/";
+  const icon_url = `${base_url}icons/`;
+  const rule_url = `${base_url}rules/`;
 
   config["proxy-groups"] = [
     {
       name: proxy_name,
       type: "select",
       proxies: ["0.1倍率", "0.01倍率", "自动选择", ...代理组],
-      icon: `${base_url}default.svg`,
+      icon: `${icon_url}default.svg`,
     },
     {
       name: "在线播放",
       type: "select",
       proxies: ["自动选择","0.1倍率", "0.01倍率", proxy_name],
-      icon: `${base_url}online.svg`,
+      icon: `${icon_url}online.svg`,
     },
     {
       name: "下载",
       type: "select",
       proxies: ["自动选择", "0.01倍率", "0.1倍率", proxy_name],
-      icon: `${base_url}download.svg`,
+      icon: `${icon_url}download.svg`,
     },
     {
       name: "纸飞机",
       type: "select",
       proxies: ["自动选择","0.01倍率", "0.1倍率", proxy_name],
-      icon: `${base_url}telegram.svg`,
+      icon: `${icon_url}telegram.svg`,
     },
     {
       name: "anime1",
       type: "select",
       proxies: ["DIRECT", proxy_name],
+      icon: `${icon_url}anime1.svg`,
     },
     {
       name: "漏网之鱼",
       type: "select",
       proxies: ["DIRECT", proxy_name],
-      icon: `${base_url}fish.svg`,
+      icon: `${icon_url}fish.svg`,
     },
     {
       name: "自动选择",
       type: "url-test",
       proxies: 代理组,
-      icon: `${base_url}auto.svg`,
+      icon: `${icon_url}auto.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -96,7 +99,7 @@ function main(config) {
       name: "0.1倍率",
       type: "url-test",
       proxies: 十分之一,
-      icon: `${base_url}0.1.svg`,
+      icon: `${icon_url}0.1.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -105,7 +108,7 @@ function main(config) {
       name: "排除🇭🇰",
       type: "url-test",
       proxies: 排除香港,
-      icon: `${base_url}disable.svg`,
+      icon: `${icon_url}disable.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
     },
@@ -113,7 +116,7 @@ function main(config) {
       name: "排除🇯🇵",
       type: "url-test",
       proxies: 排除日本,
-      icon: `${base_url}disable.svg`,
+      icon: `${icon_url}disable.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -122,7 +125,7 @@ function main(config) {
       name: "0.01倍率",
       type: "url-test",
       proxies: 百分之一,
-      icon: `${base_url}0.01.svg`,
+      icon: `${icon_url}0.01.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
       tolerance: 50,
@@ -133,7 +136,7 @@ function main(config) {
     low_delay: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}low_delay.txt`,
+      url: `${rule_url}low_delay.txt`,
       format: "text",
       interval: 86400,
       path: "./low_delay.txt",
@@ -141,7 +144,7 @@ function main(config) {
     no_hk: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}no_hk.txt`,
+      url: `${rule_url}no_hk.txt`,
       format: "text",
       interval: 86400,
       path: "./no_hk.txt",
@@ -149,7 +152,7 @@ function main(config) {
     no_jp: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}no_jp.txt`,
+      url: `${rule_url}no_jp.txt`,
       format: "text",
       interval: 86400,
       path: "./no_jp.txt",
@@ -157,7 +160,7 @@ function main(config) {
     在线: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}online.txt`,
+      url: `${rule_url}online.txt`,
       format: "text",
       interval: 86400,
       path: "./在线.txt",
@@ -165,7 +168,7 @@ function main(config) {
     下载: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}download.txt`,
+      url: `${rule_url}download.txt`,
       format: "text",
       interval: 86400,
       path: "./下载.txt",
@@ -173,7 +176,7 @@ function main(config) {
     预代理: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}pre_proxy.txt`,
+      url: `${rule_url}pre_proxy.txt`,
       format: "text",
       interval: 86400,
       path: "./预代理.txt",
@@ -181,7 +184,7 @@ function main(config) {
     我的代理: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}proxy.txt`,
+      url: `${rule_url}proxy.txt`,
       format: "text",
       interval: 86400,
       path: "./我的代理.txt",
@@ -189,7 +192,7 @@ function main(config) {
     我的直连: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}direct.txt`,
+      url: `${rule_url}direct.txt`,
       format: "text",
       interval: 86400,
       path: "./我的直连.txt",

@@ -13,13 +13,13 @@ const dir = ".";
 const configPath = join(dir, "config.js");
 let content = await readFile(configPath, "utf-8");
 
-const pattern = /`\$\{base_url\}([^`]+\.svg)`/g;
+const pattern = /`\$\{icon_url\}([^`]+\.svg)`/g;
 const svgNames = [...new Set([...content.matchAll(pattern)].map((m) => m[1]))];
 
 // 读取所有涉及的 SVG 文件
 const icons = {};
 for (const name of svgNames) {
-  const svgPath = join(dir, name);
+  const svgPath = join(dir, "icons", name);
   try {
     const buf = await readFile(svgPath);
     icons[name] = `data:image/svg+xml;base64,${buf.toString("base64")}`;

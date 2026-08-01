@@ -46,6 +46,8 @@ function main(config) {
 
   const proxy_name = "默认代理";
   const base_url = "https://raw.githubusercontent.com/cz-97/proxy/main/";
+  const icon_url = `${base_url}icons/`;
+  const rule_url = `${base_url}rules/`;
 
   config["proxy-groups"] = [
     {
@@ -76,6 +78,7 @@ function main(config) {
       name: "anime1",
       type: "select",
       proxies: ["DIRECT", proxy_name],
+      icon: "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaWNvbiIgdmlld0JveD0iMCAwIDEwMjQgMTAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCI+PHBhdGggZD0iTTg5NiAxOTJINzA0djI1NkgzMjBWMTkySDEyOHY2NDBoMTkyVjU3NmgzODR2MjU2aDE5MnoiIGZpbGw9IiNmZjAwMDAiLz48L3N2Zz4=",
     },
     {
       name: "漏网之鱼",
@@ -133,7 +136,7 @@ function main(config) {
     low_delay: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}low_delay.txt`,
+      url: `${rule_url}low_delay.txt`,
       format: "text",
       interval: 86400,
       path: "./low_delay.txt",
@@ -141,7 +144,7 @@ function main(config) {
     no_hk: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}no_hk.txt`,
+      url: `${rule_url}no_hk.txt`,
       format: "text",
       interval: 86400,
       path: "./no_hk.txt",
@@ -149,7 +152,7 @@ function main(config) {
     no_jp: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}no_jp.txt`,
+      url: `${rule_url}no_jp.txt`,
       format: "text",
       interval: 86400,
       path: "./no_jp.txt",
@@ -157,7 +160,7 @@ function main(config) {
     在线: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}online.txt`,
+      url: `${rule_url}online.txt`,
       format: "text",
       interval: 86400,
       path: "./在线.txt",
@@ -165,7 +168,7 @@ function main(config) {
     下载: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}download.txt`,
+      url: `${rule_url}download.txt`,
       format: "text",
       interval: 86400,
       path: "./下载.txt",
@@ -173,7 +176,7 @@ function main(config) {
     预代理: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}pre_proxy.txt`,
+      url: `${rule_url}pre_proxy.txt`,
       format: "text",
       interval: 86400,
       path: "./预代理.txt",
@@ -181,7 +184,7 @@ function main(config) {
     我的代理: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}proxy.txt`,
+      url: `${rule_url}proxy.txt`,
       format: "text",
       interval: 86400,
       path: "./我的代理.txt",
@@ -189,7 +192,7 @@ function main(config) {
     我的直连: {
       behavior: "classical",
       type: "http",
-      url: `${base_url}direct.txt`,
+      url: `${rule_url}direct.txt`,
       format: "text",
       interval: 86400,
       path: "./我的直连.txt",
