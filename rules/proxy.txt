@@ -16,3 +16,4 @@ DOMAIN,i.hamreus.com
 DOMAIN,roum22.xyz
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,freedownloadmanager.org
+DOMAIN-SUFFIX,spacedesk.net
