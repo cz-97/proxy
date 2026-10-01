@@ -59,7 +59,7 @@ function main(config) {
     {
       name: "在线播放",
       type: "select",
-      proxies: ["自动选择","0.1倍率", "0.01倍率", proxy_name],
+      proxies: ["自动选择", "0.1倍率", "0.01倍率", proxy_name],
       icon: `${icon_url}online.svg`,
     },
     {
@@ -71,7 +71,7 @@ function main(config) {
     {
       name: "纸飞机",
       type: "select",
-      proxies: ["自动选择","0.01倍率", "0.1倍率", proxy_name],
+      proxies: ["自动选择", "0.01倍率", "0.1倍率", proxy_name],
       icon: `${icon_url}telegram.svg`,
     },
     {
