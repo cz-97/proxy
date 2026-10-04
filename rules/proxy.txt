@@ -17,3 +17,7 @@ DOMAIN,roum22.xyz
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,freedownloadmanager.org
 DOMAIN-SUFFIX,spacedesk.net
+DOMAIN-KEYWORD,sex
+DOMAIN-KEYWORD,porn
+DOMAIN,bad.news
+DOMAIN,dm1.xfdm.pro

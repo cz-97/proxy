@@ -29,10 +29,8 @@ clash客户端自定义脚本，加工你的订阅。
 | `auto.svg` | 自动选择图标 |
 | `default.svg` | 默认图标 |
 | `disable.svg` | 禁用图标 |
-| `download.svg` | 下载图标 |
 | `fish.svg` | 代理鱼图标 |
 | `github.svg` | GitHub 图标 |
-| `online.svg` | 在线图标 |
 | `telegram.svg` | Telegram 图标 |
 
 ### 规则文件
@@ -43,20 +41,17 @@ clash客户端自定义脚本，加工你的订阅。
 | `low_delay.txt` | 低延迟规则 |
 | `no_hk.txt` | 排除香港节点规则 |
 | `no_jp.txt` | 排除日本节点规则 |
-| `online.txt` | 在线规则 |
 | `pre_proxy.txt` | 优先代理规则 |
 | `proxy.txt` | 代理规则 |
-| `download.txt` | 下载规则 |
 
 ## 使用方法
 
 ### 基础配置
 
 1. 链接图标版（默认）：
-   ```bash
-   # 编辑 config.js 后同步到 Base64 版本
-   bun svg2b64.js
-   ```
+```bash
+bun svg2b64.js
+```
 
 2. Base64 图标版：
    直接使用 `config_base64_icon.js`

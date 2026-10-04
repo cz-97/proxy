@@ -1,4 +1,0 @@
-DOMAIN-KEYWORD,sex
-DOMAIN-KEYWORD,porn
-DOMAIN,bad.news
-DOMAIN,dm1.xfdm.pro

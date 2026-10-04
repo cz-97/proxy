@@ -1,1 +1,0 @@
-DOMAIN,release-assets.githubusercontent.com
