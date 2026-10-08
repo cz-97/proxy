@@ -53,7 +53,7 @@ function main(config) {
     {
       name: proxy_name,
       type: "select",
-      proxies: ["0.1倍率", "0.01倍率", "自动选择", ...代理组],
+      proxies: ["自动选择", "0.1倍率", "0.01倍率", ...代理组],
       icon: `${icon_url}default.svg`,
     },
     {
