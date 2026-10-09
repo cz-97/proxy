@@ -4,122 +4,131 @@ function main(config) {
   config["rule-providers"] = {};
 
   let 十分之一 = [];
-  let 百分之一 = [];
-  let 排除香港 = [];
-  let 排除日本 = [];
-  let 代理组 = [];
+let 百分之一 = [];
+let 排除香港 = [];
+let 排除日本 = [];
+let 代理组 = [];
 
-  const proxies = config["proxies"];
+const proxies = config["proxies"];
 
-  for (const proxy of proxies) {
-    const name = proxy.name;
-    if (name.includes("套餐到期") || name.includes("剩余流量")) {
-      continue;
-    }
-    代理组.push(name);
-    if (name.includes("0.1")) {
-      十分之一.push(name);
-    }
-    if (!name.includes("香港")) {
-      排除香港.push(name);
-    }
-    if (!name.includes("日本")) {
-      排除日本.push(name);
-    }
-    if (name.includes("0.01")) {
-      百分之一.push(name);
-    }
+for (const proxy of proxies) {
+  const name = proxy.name;
+
+  if (name.includes("套餐到期") || name.includes("剩余流量")) {
+    continue;
   }
 
-  if (十分之一.length === 0) {
-    十分之一 = 代理组;
-  }
-  if (排除香港.length === 0) {
-    排除香港 = 十分之一;
-  }
-  if (排除日本.length === 0) {
-    排除日本 = 十分之一;
-  }
-  if (百分之一.length === 0) {
-    百分之一 = 十分之一;
+  代理组.push(name);
+
+  if (name.includes("0.1")) {
+    十分之一.push(name);
   }
 
-  const proxy_name = "默认代理";
-  const base_url = "https://raw.githubusercontent.com/cz-97/proxy/main/";
-  const icon_url = `${base_url}icons/`;
-  const rule_url = `${base_url}rules/`;
+  if (name.includes("0.01")) {
+    百分之一.push(name);
+  }
+if (!/香港|hong\s*kong/i.test(name)) {
+  排除香港.push(name);
+}
 
-  config["proxy-groups"] = [
-    {
-      name: proxy_name,
-      type: "select",
-      proxies: ["自动选择", "0.1倍率", "0.01倍率", ...代理组],
-      icon: `${icon_url}default.svg`,
-    },
-    {
-      name: "纸飞机",
-      type: "select",
-      proxies: ["自动选择", "0.01倍率", "0.1倍率", proxy_name],
-      icon: `${icon_url}telegram.svg`,
-    },
-    {
-      name: "anime1",
-      type: "select",
-      proxies: ["DIRECT", proxy_name],
-      icon: `${icon_url}anime1.svg`,
-    },
-    {
-      name: "漏网之鱼",
-      type: "select",
-      proxies: ["DIRECT", proxy_name],
-      icon: `${icon_url}fish.svg`,
-    },
-    {
-      name: "自动选择",
-      type: "url-test",
-      proxies: 代理组,
-      icon: `${icon_url}auto.svg`,
-      url: "http://www.gstatic.com/generate_204",
-      interval: 1800,
-      tolerance: 50,
-    },
-    {
-      name: "0.1倍率",
-      type: "url-test",
-      proxies: 十分之一,
-      icon: `${icon_url}0.1.svg`,
-      url: "http://www.gstatic.com/generate_204",
-      interval: 1800,
-      tolerance: 50,
-    },
-    {
-      name: "排除🇭🇰",
-      type: "url-test",
-      proxies: 排除香港,
-      icon: `${icon_url}disable.svg`,
-      url: "http://www.gstatic.com/generate_204",
-      interval: 300,
-    },
-    {
-      name: "排除🇯🇵",
-      type: "url-test",
-      proxies: 排除日本,
-      icon: `${icon_url}disable.svg`,
-      url: "http://www.gstatic.com/generate_204",
-      interval: 1800,
-      tolerance: 50,
-    },
-    {
-      name: "0.01倍率",
-      type: "url-test",
-      proxies: 百分之一,
-      icon: `${icon_url}0.01.svg`,
-      url: "http://www.gstatic.com/generate_204",
-      interval: 1800,
-      tolerance: 50,
-    },
-  ];
+if (!/日本|japan/i.test(name)) {
+  排除日本.push(name);
+}
+}
 
+const proxy_name = "默认代理";
+const base_url = "https://raw.githubusercontent.com/cz-97/proxy/main/";
+const icon_url = `${base_url}icons/`;
+const rule_url = `${base_url}rules/`;
+
+config["proxy-groups"] = [
+  {
+    name: proxy_name,
+    type: "select",
+    proxies: [
+      "自动选择",
+      ...(十分之一.length > 0 ? ["0.1倍率"] : []),
+      ...(百分之一.length > 0 ? ["0.01倍率"] : []),
+      ...代理组,
+    ],
+    icon: `${icon_url}default.svg`,
+  },
+  {
+    name: "纸飞机",
+    type: "select",
+    proxies: [
+      "自动选择",
+      ...(百分之一.length > 0 ? ["0.01倍率"] : []),
+      ...(十分之一.length > 0 ? ["0.1倍率"] : []),
+      proxy_name,
+    ],
+    icon: `${icon_url}telegram.svg`,
+  },
+  {
+    name: "anime1",
+    type: "select",
+    proxies: ["DIRECT", proxy_name],
+    icon: `${icon_url}anime1.svg`,
+  },
+  {
+    name: "漏网之鱼",
+    type: "select",
+    proxies: ["DIRECT", proxy_name],
+    icon: `${icon_url}fish.svg`,
+  },
+  {
+    name: "自动选择",
+    type: "url-test",
+    proxies: 代理组,
+    icon: `${icon_url}auto.svg`,
+    url: "http://www.gstatic.com/generate_204",
+    interval: 1800,
+    tolerance: 50,
+  },
+  ...(十分之一.length > 0
+    ? [
+        {
+          name: "0.1倍率",
+          type: "url-test",
+          proxies: 十分之一,
+          icon: `${icon_url}0.1.svg`,
+          url: "http://www.gstatic.com/generate_204",
+          interval: 1800,
+          tolerance: 50,
+        },
+      ]
+    : []),
+  {
+    name: "排除🇭🇰",
+    type: "url-test",
+    proxies: 排除香港,
+    icon: `${icon_url}disable.svg`,
+    url: "http://www.gstatic.com/generate_204",
+    interval: 300,
+  },
+  {
+    name: "排除🇯🇵",
+    type: "url-test",
+    proxies: 排除日本,
+    icon: `${icon_url}disable.svg`,
+    url: "http://www.gstatic.com/generate_204",
+    interval: 1800,
+    tolerance: 50,
+  },
+  ...(百分之一.length > 0
+    ? [
+        {
+          name: "0.01倍率",
+          type: "url-test",
+          proxies: 百分之一,
+          icon: `${icon_url}0.01.svg`,
+          url: "http://www.gstatic.com/generate_204",
+          interval: 1800,
+          tolerance: 50,
+        },
+      ]
+    : []),
+];
   config["rule-providers"] = {
     low_delay: {
       behavior: "classical",
