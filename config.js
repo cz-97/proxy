@@ -13,8 +13,9 @@ function main(config) {
 
   for (const proxy of proxies) {
     const name = proxy.name;
+    const server = proxy.sever;
 
-    if (name.includes("套餐到期") || name.includes("剩余流量")) {
+    if (server === "127.0.0.1") {
       continue;
     }
 
@@ -31,7 +32,7 @@ function main(config) {
       排除香港.push(name);
     }
 
-    if (!/日本|japan/i.test(name)) {
+    if (!/日本|japan|Tokyo/i.test(name) && !/jp/i.test(server)) {
       排除日本.push(name);
     }
   }
