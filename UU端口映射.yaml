@@ -14,11 +14,6 @@ proxy-groups:
     type: select
     proxies:
       - UU端口映射
-  - name: 漏网之鱼
-    type: select
-    proxies:
-      - proxy
-      - direct
 
 rule-providers:
   预代理:
@@ -124,4 +119,4 @@ rules:
   - RULE-SET,我的代理,proxy
   - RULE-SET,远程代理,proxy
   - RULE-SET,非中国顶域,proxy
-  - MATCH,漏网之鱼
+  - MATCH,proxy
