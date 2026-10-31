@@ -9,16 +9,16 @@ function main(config) {
   let 排除日本 = [];
   let 代理组 = [];
 
-  const proxies = config["proxies"];
+  let proxies = [];
 
-  for (const proxy of proxies) {
-    const name = proxy.name;
-    const server = proxy.server;
-
-    if (server === "127.0.0.1") {
-      continue;
+  let sort = 1;
+  for (let proxy of config["proxies"]) {
+    if (!/日本|japan|Tokyo/i.test(proxy.name) && /jp/i.test(proxy.server)) {
+      proxy.name = `日本${sort}号`;
+      sort = sort + 1;
     }
 
+    const name = proxy.name;
     代理组.push(name);
 
     if (name.includes("0.1")) {
@@ -32,10 +32,13 @@ function main(config) {
       排除香港.push(name);
     }
 
-    if (!/日本|japan|Tokyo/i.test(name) && !/jp/i.test(server)) {
+    if (!/日本|japan|Tokyo/i.test(name)) {
       排除日本.push(name);
     }
+    proxies.push(proxy);
   }
+
+  config["proxies"] = proxies;
 
   const proxy_name = "默认代理";
   const base_url = "https://raw.githubusercontent.com/cz-97/proxy/main/";
