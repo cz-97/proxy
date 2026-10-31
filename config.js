@@ -13,7 +13,7 @@ function main(config) {
 
   for (const proxy of proxies) {
     const name = proxy.name;
-    const server = proxy.sever;
+    const server = proxy.server;
 
     if (server === "127.0.0.1") {
       continue;
