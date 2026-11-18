@@ -58,6 +58,21 @@ function main(config) {
       icon: `${icon_url}default.svg`,
     },
     {
+      name: "自动选择",
+      type: "url-test",
+      proxies: 代理组,
+      icon: `${icon_url}auto.svg`,
+      url: "http://www.gstatic.com/generate_204",
+      interval: 1800,
+      tolerance: 20,
+    },
+    {
+      name: "漏网之鱼",
+      type: "select",
+      proxies: ["DIRECT", proxy_name],
+      icon: `${icon_url}fish.svg`,
+    },
+    {
       name: "纸飞机",
       type: "select",
       proxies: [
@@ -74,21 +89,6 @@ function main(config) {
       proxies: ["DIRECT", proxy_name],
       icon: `${icon_url}anime1.svg`,
     },
-    {
-      name: "漏网之鱼",
-      type: "select",
-      proxies: ["DIRECT", proxy_name],
-      icon: `${icon_url}fish.svg`,
-    },
-    {
-      name: "自动选择",
-      type: "url-test",
-      proxies: 代理组,
-      icon: `${icon_url}auto.svg`,
-      url: "http://www.gstatic.com/generate_204",
-      interval: 1800,
-      tolerance: 50,
-    },
     ...(十分之一.length > 0
       ? [
           {
@@ -98,7 +98,7 @@ function main(config) {
             icon: `${icon_url}0.1.svg`,
             url: "http://www.gstatic.com/generate_204",
             interval: 1800,
-            tolerance: 50,
+            tolerance: 20,
           },
         ]
       : []),
@@ -117,7 +117,7 @@ function main(config) {
       icon: `${icon_url}disable.svg`,
       url: "http://www.gstatic.com/generate_204",
       interval: 1800,
-      tolerance: 50,
+      tolerance: 20,
     },
     ...(百分之一.length > 0
       ? [
@@ -128,7 +128,7 @@ function main(config) {
             icon: `${icon_url}0.01.svg`,
             url: "http://www.gstatic.com/generate_204",
             interval: 1800,
-            tolerance: 50,
+            tolerance: 20,
           },
         ]
       : []),
