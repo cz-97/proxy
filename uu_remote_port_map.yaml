@@ -107,8 +107,7 @@ rule-providers:
 
 rules:
   - RULE-SET,广告,REJECT
-  - DOMAIN-KEYWORD,anich,proxy
-  - DOMAIN-KEYWORD,vdownload,proxy
+  - RULE-SET,我的直连,proxy
   - RULE-SET,预代理,proxy
   - RULE-SET,远程直连,DIRECT
   - RULE-SET,私有域,DIRECT
@@ -116,7 +115,6 @@ rules:
   - RULE-SET,局域网IP及保留IP,DIRECT
   - GEOIP,LAN,DIRECT
   - GEOIP,CN,DIRECT
-  - RULE-SET,我的直连,proxy
   - RULE-SET,纸飞机,proxy
   - RULE-SET,我的代理,proxy
   - RULE-SET,远程代理,proxy
